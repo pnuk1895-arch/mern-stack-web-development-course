@@ -1,0 +1,14 @@
+ques1:Create a website layout. Add a header box, one content box, and one footer.
+
+ques2:Add borders and margins to the layout.
+
+
+ques3:Check if the margin collapses between the content box and footer.
+
+quesr4:Add the box-sizing property to the content box. Observe the difference.
+Create the following website layout,
+
+Add a footer with Google Font “Ballu Bhai” to question 1.
+Remove the underlines from links in question 1.
+Demonstrate the difference between display: none and visibility: hidden using a div.
+Change the footer to all uppercase in question 1.

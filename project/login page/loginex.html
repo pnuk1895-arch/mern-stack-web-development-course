@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Card with Background Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            padding: 20px;
+        }
+        
+        .card-container {
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        /* Card Header */
+        .card-header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .header-icons i {
+            font-size: 1.2rem;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .header-icons i:hover {
+            color: #6e8efb;
+        }
+        
+        /* Card Main - with background image */
+        .card-main {
+            flex: 1;
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 0;
+            position: relative;
+        }
+        
+        /* Overlay to improve text readability */
+        .card-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 2;
+            padding: 25px;
+            color: #333;
+        }
+        
+        .card-content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .card-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .card-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-content li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        /* Scrollbar styling */
+        .card-main::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .card-main::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+        
+        .card-main::-webkit-scrollbar-thumb {
+            background: rgba(110, 142, 251, 0.7);
+            border-radius: 10px;
+        }
+        
+        .card-main::-webkit-scrollbar-thumb:hover {
+            background: rgba(110, 142, 251, 0.9);
+        }
+        
+        /* Card Footer */
+        .card-footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .footer-button {
+            background: linear-gradient(to right, #6e8efb, #a777e3);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .footer-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+        }
+        
+        /* Instructions */
+        .instructions {
+            margin-top: 25px;
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
+            max-width: 450px;
+        }
+        
+        .instructions i {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 500px) {
+            .card-container {
+                max-width: 95%;
+            }
+            
+            .card-header, .card-footer {
+                padding: 15px 20px;
+            }
+            
+            .header-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card Header -->
+        <header class="card-header">
+            <div class="header-title">Mountain Adventure</div>
+            <div class="header-icons">
+                <i class="fas fa-heart" title="Add to favorites"></i>
+                <i class="fas fa-share-alt" title="Share"></i>
+                <i class="fas fa-cog" title="Settings"></i>
+            </div>
+        </header>
+        
+        <!-- Card Main with Background Image -->
+        <main class="card-main">
+            <div class="card-content">
+                <h2>Exploring the Alps</h2>
+                <p>This card features a beautiful mountain background image with scrollable content area. The background image is fixed while the text content scrolls over it.</p>
+                
+                <p>The Alps are the highest and most extensive mountain range system that lies entirely in Europe, stretching approximately 1,200 kilometers across eight Alpine countries.</p>
+                
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Highest peak: Mont Blanc (4,808 m)</li>
+                    <li>Home to about 13,000 plant species</li>
+                    <li>Contains more than 30,000 animal species</li>
+                    <li>Major tourist destination for skiing and mountaineering</li>
+                    <li>Source of many major European rivers</li>
+                </ul>
+                
+                <p>The Alpine region has a strong cultural identity. Traditional practices such as farming, cheesemaking, and woodworking still thrive in Alpine villages.</p>
+                
+                <p>Climate change has had a significant impact on the Alps. Glaciers have been retreating since the end of the Little Ice Age in the mid-19th century, and the rate of retreat has increased dramatically since the 1980s.</p>
+                
+                <h3>Popular Activities:</h3>
+                <ul>
+                    <li>Skiing and snowboarding in winter</li>
+                    <li>Hiking and mountain biking in summer</li>
+                    <li>Rock climbing and mountaineering</li>
+                    <li>Paragliding and hang gliding</li>
+                    <li>Visiting traditional Alpine villages</li>
+                </ul>
+                
+                <p>Whether you're an experienced mountaineer or just looking for a peaceful retreat, the Alps offer something for everyone. The combination of breathtaking scenery, rich culture, and diverse activities makes this region one of Europe's most cherished natural treasures.</p>
+            </div>
+        </main>
+        
+        <!-- Card Footer -->
+        <footer class="card-footer">
+            <div class="footer-info">
+                <i class="far fa-calendar-alt"></i> Updated: June 2023
+            </div>
+            <button class="footer-button">Explore More</button>
+        </footer>
+    </div>
+    
+    <div class="instructions">
+        <p><i class="fas fa-mouse-pointer"></i> Scroll inside the card to see more content</p>
+    </div>
+
+    <script>
+        // Add interactivity to the icons and button
+        document.addEventListener('DOMContentLoaded', function() {
+            // Heart icon toggle
+            const heartIcon = document.querySelector('.fa-heart');
+            heartIcon.addEventListener('click', function() {
+                this.classList.toggle('fas');
+                this.classList.toggle('far');
+                this.style.color = this.classList.contains('fas') ? '#e74c3c' : '';
+            });
+            
+            // Settings icon alert
+            const settingsIcon = document.querySelector('.fa-cog');
+            settingsIcon.addEventListener('click', function() {
+                alert('Card settings would open here.');
+            });
+            
+            // Share icon alert
+            const shareIcon = document.querySelector('.fa-share-alt');
+            shareIcon.addEventListener('click', function() {
+                alert('Share options would appear here.');
+            });
+            
+            // Button click event
+            const exploreButton = document.querySelector('.footer-button');
+            exploreButton.addEventListener('click', function() {
+                alert('Exploring more about mountain adventures!');
+                this.textContent = 'Exploring...';
+                setTimeout(() => {
+                    this.textContent = 'Explore More';
+                }, 1500);
+            });
+            
+            // Change background image on double click
+            const cardMain = document.querySelector('.card-main');
+            const images = [
+                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                'https://images.unsplash.com/photo-1464278533981-50106e6176b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
+            ];
+            
+            let currentImageIndex = 0;
+            
+            cardMain.addEventListener('dblclick', function() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                this.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+                
+                // Show a notification
+                const notifications = ['Switched to Mountain View', 'Switched to Lake View', 'Switched to Forest View'];
+                alert(notifications[currentImageIndex === 0 ? 2 : currentImageIndex - 1]);
+            });
+        });
+    </script>
+</body>
+</html>

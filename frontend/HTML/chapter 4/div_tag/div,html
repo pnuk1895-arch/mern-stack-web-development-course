@@ -1,0 +1,7 @@
+<!-- div tag -->
+
+<!-- Block-level element: It takes up the full width available in it's parent element and starts on a new line. -->
+
+<!-- Generic container: It has no special meaning by itself; it’s mainly used for layout or grouping. -->
+ 
+<!-- Nesting allowed: You can place other elements (text, images, forms, lists, etc.) inside a <div>. -->

@@ -1,0 +1,144 @@
+<!-- what is html?  -->
+ 1.html is a hypertext markup language, used to add like text, images, videos, 
+link etc and give proper structure to its content on the webpage using tag 
+2. tag-is a fundamental building block of an html document that instructs the 
+browser on how to format and display the content of html element 
+3. element-it consists opening tag, closing tag and it has some content b/w 
+opening and closing tag this complete set is called element. 
+exp- <p>hello I am learning html</p> 
+
+<!-- types of tag   -->
+ans)1.closing tag-closing tag exit in pair it has open tag with self-closing tag 
+exp- <p></p> 
+2.open tag-open tag doesn’t have self-closing tag 
+exp- <img src="" alt="">, <br> 
+
+<!-- Installation and set up  -->
+step-01-installing ide or code editor 
+1.To write a html document we need a code editor like note pad or ide 
+(integrated development environment) software like VS code, code blocks, 
+IntelliJ IDEA etc  
+2.In window we have default code editor called note pad but note pad has 
+some limitation 
+<!-- 1.no autocomplete suggestion that is predictive text 
+ 2.no colourful syntax highlighting 
+ 3.not showing error if we make mistake 
+ 4.we have to do everything manually  -->
+
+<!-- IDE SELECTION  -->
+1. so, we should use ide like vscode, code blocks etc bcz 
+2. it has autocompleted suggestion that is predictive text  
+3. provide colourful syntax highlighting like keywords in blue, variable in green, 
+error in red 
+ 4. we can write, run, find debug and compiled the code in one place 
+
+ <!-- installing Browser  -->
+1. browser (google chrome, Firefox, micrsoftedge) helps in converting html 
+document in to the webpage so that user can interact with it 
+2. it allows changes to the webpage dynamically using java script 
+3. makes the request to the server and get response from server 
+
+ <!-- How to Download & Install Visual Studio Code (for Windows)  -->
+1. Open the Official Website or type vscode in browser 
+Go to 👉 https://code.visualstudio.com 
+2. Click the big blue button:( “Download for Windows”)
+This will download the file VSCodeSetup.exe. 
+3. Run the Installer 
+. Double-click on VSCodeSetup.exe. 
+. Accept the license agreement. 
+. Keep the default installation location. 
+. ✅ Make sure to check: 
+. Add to PATH 
+. Create a Desktop Icon 
+Click Next → Install. 
+4. Finish Installation 
+After installation, click Finish. 
+Now you can open VS Code from the Desktop icon or Start menu. 
+4. Install Extensions  
+. On the left sidebar, click the Extensions icon (four squares). 
+Search and install useful extensions like: 
+. Live Server (to run html document in browser). 
+. Prettier (to format code). 
+. ES7+ React/Redux Snippets (for React). 
+
+PRACTICE QUESTION 
+
+ <!-- make a simple webpage and give title "first web page" and content "hey I have created my first webpage" by doing everything manually. --> 
+Sol: - 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-                   
+scale=1.0"> 
+<title>first web page</title> 
+</head> 
+<body> 
+<p>😀 hey I am created my first web page</p> 
+<body/> 
+</html> 
+
+<!-- what is html boiler code  -->
+Ans html boiler plate code is a basic must tag that has to be write in order to write a 
+html document 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-                   
+scale=1.0"> 
+<title>boiler code</title> 
+</head> 
+<body> 
+<body/> 
+</html> 
+<!DOCTYPE html>, <html>, <meta>, <head>, and <body> are boilerplate code, you 
+write them in every HTML page, even though the main content changes. 
+
+Explanation of each tag in boiler code: 
+1. <!DOCTYPE html> → Tells the browser this is an HTML5 document. 
+2. <html lang="en"> → Root element, language is English. 
+3. <head> → Contains meta information (not shown on page). 
+ 3.1 <meta charset="UTF-8"> → UTF-8 allows us to use all languages + 
+emojis directly. 
+ 3.2 If we used ASCII only, non-English text or emojis wouldn’t display 
+properly. 
+ 3.3 <meta name="viewport" content="width=device-width, initial
+scale=1.0"> → Makes site responsive on mobile. 
+3.4 <title> → Title shown on browser tab. 
+4. <body> → Actual content of the page (what users see). 
+<!-- How to Generate boiler code in VS Code  -->
+1. Type: exclamation mark(!) it gives emmit abbreviation  
+2. Click on emmit abbreviation → VS Code will auto-generate the full HTML 
+boilerplate.  
+
+ <!-- make a simple webpage by using boiler code and give title "first web page"
+and content "hey I have created my first webpage” -->
+Ques-04 what is comment 
+Ans A comment is a piece of text in code that is ignored by the browser or 
+compiler. 
+It’s written only for developers to explain the code, make notes, or temporarily 
+disable some part of code 
+Ques5- create a webpage showing” I am learning with techno globe” and use 
+comments and some caseinsentive tags 
+
+<!-- What the charset meta tag does -->
+In HTML, the <meta charset="..."> tag tells the browser how to interpret
+the,bytes of the page — that is, which character encoding to use.
+
+<!-- for character encoding we gernally use utf-8 -->
+example:<meta charset="UTF-8">
+This means the page is encoded in UTF-8, which supports nearly all langauge
+alphabet ,symbols and emojis in the world
+
+<!-- for character encoding we can also use US-ASCII  -->
+but it support only (A–Z, a–z, numbers, and punctuation).
+Any special characters (like é, ₹, or emojis 😊) will break or show incorrectly.
+
+<!-- what is the menaing of encoding -->
+our computer doesn’t store text — it stores bytes.
+Encoding tells how to translate those bytes back into readable characters
+
+the viewport meta tag makes your webpage responsive
+by telling the browser how to scale and display it on different screen sizes.
+
