@@ -1,10 +1,8 @@
 <!-- what is html?  -->
  1.html is a hypertext markup language, used to add like text, images, videos, 
 link etc and give proper structure to its content on the webpage using tag 
-2. tag-is a fundamental building block of an html document that instructs the 
-browser on how to format and display the content of html element 
-3. element-it consists opening tag, closing tag and it has some content b/w 
-opening and closing tag this complete set is called element. 
+2. tag-is a fundamental building block of an html document that instructs the browser on how to format and display the content of html element 
+3. element-it consists opening tag, closing tag and it has some content between opening and closing tag this complete set is called element. 
 exp- <p>hello I am learning html</p> 
 
 <!-- types of tag   -->
@@ -135,7 +133,7 @@ alphabet ,symbols and emojis in the world
 but it support only (A–Z, a–z, numbers, and punctuation).
 Any special characters (like é, ₹, or emojis 😊) will break or show incorrectly.
 
-<!-- what is the menaing of encoding -->
+<!-- what is the meaning of encoding -->
 our computer doesn’t store text — it stores bytes.
 Encoding tells how to translate those bytes back into readable characters
 
