@@ -1,0 +1,12 @@
+.container{
+    background-color: rgb(200, 120, 80);
+    height: 600px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr) ;
+    gap: 10px;
+}
+.box{
+    border: 2px solid ;
+}

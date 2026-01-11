@@ -1,0 +1,36 @@
+.container{
+    background-color: black;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.min_container1{
+    background-color: red;
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+.min_container2{
+    background-color: yellow;
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+.box1{
+    background-color: rgb(190, 140, 220);
+    flex: 1;
+}
+.box2{
+    background-color: rgb(12, 40, 150);
+    flex: 1;
+}
+.box3{
+    flex: 1;
+    background-color: rgb(120, 65, 87);
+}
+.box4{
+    background-color: rgb(150, 200, 100);
+    flex: 1;
+}

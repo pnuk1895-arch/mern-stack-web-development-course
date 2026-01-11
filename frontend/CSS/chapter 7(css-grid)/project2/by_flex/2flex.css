@@ -1,0 +1,24 @@
+.container{
+    background-color: black;
+    height: 420px;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.element1{
+    background-color: rgb(2, 250, 150);
+    flex: 1; 
+    display: flex;
+    gap: 10px;
+}
+.element2{
+    background-color: rgb(130, 240, 41);
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+.box{
+    border: 2px solid red;
+    flex: 1;
+}

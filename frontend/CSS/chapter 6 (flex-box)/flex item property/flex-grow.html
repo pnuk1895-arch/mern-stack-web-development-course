@@ -1,0 +1,50 @@
+<!-- Q1)What is flex grow?
+Ans: flex grow use for when you want to divide or provide empty space to the flex elements.It is work only on flex items.
+That's value 
+flex grow:1/2/3/4 
+1/2/3/4 means empty space will into that parts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+         .container{
+            background-color:black;
+            height:500px;
+            width: 886px;
+            display: flex;
+        }
+        .box{
+            height: 120px;
+            width: 120px;
+        }
+        .box1{
+            background-color: blue;
+            flex-grow: 1;
+        }
+        .box2{
+            background-color: brown;
+            flex-grow: 1;
+        }
+        .box3{
+            background-color: red;
+            flex-grow: 2;
+        }
+        .box4{
+            background-color: green;
+            flex-grow: 3;
+        }
+    </style> 
+</head>
+<body>
+   <div class="container">
+   <div class="box box1"> box1</div>
+   <div class="box box2"> box2</div>
+   <div class="box box2"> box3</div>
+   <div class="box box4">box4</div>
+</div>
+</body>
+</html>
+    

@@ -1,0 +1,48 @@
+<!-- Q)what is flex wrap?
+ans: Flex items will attempt to fit into a single line by default. Thus, the excess items will overflow the container if all the flex items’ combined height (or width) is greater than the flexbox’s height (or width). flex-wrap indicates whether the overflowing flex items should be wrapped across multiple lines or not. The flex-wrap property accepts the following three values:
+1)nowrap (default): Forbids wrapping the flex items and forces all the items to be on a single line. This may cause an overflow of flex items out of the container.
+2)wrap: Wraps the flex items into multiple lines, if necessary.
+3)wrap-reverse: Functions similarly to wrap but in reverse order. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            display: flex;
+            width: 500px;
+            height:600px;
+            display: flex;
+            flex-wrap: wrap; 
+            /* wrap-reserve */
+            
+           
+        }
+        .box{
+            height:100px;
+            width:100px;
+            border: 2px solid white;
+            color: azure;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+        <div class="box box6">box6</div>
+        <div class="box box7">box7</div>
+        <div class="box box8">box8</div>
+        <div class="box box9">box9</div>
+    </div>
+</body>
+</html>

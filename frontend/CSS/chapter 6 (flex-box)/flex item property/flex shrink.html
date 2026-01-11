@@ -1,0 +1,55 @@
+<!-- Q1) what is flex-shrink?
+Ans:- flex-shrink controls how much flex items shrink when there isn't have enough space. it is a items property.
+
+*That's value 
+flex-shrink:1( default)
+flex-shrink:2(fast shrink from which that's value is 1)
+flex-shrink:3(fast shrink from which that's value is lower then 3)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex shrink</title>
+    <style>
+        .container{
+            background-color:black;
+            height:500px;
+            width: 500px;
+            display: flex;
+        }
+        .box{
+            height: 120px;
+            width: 120px;
+        }
+        .box1{
+            background-color: blue;
+            flex-shrink: 1;
+        }
+        .box2{
+            background-color: brown;
+            flex-shrink: 1;
+        }
+        .box3{
+            background-color: red;
+            flex-shrink: 2;
+        }
+        .box4{
+            background-color: green;
+            flex-shrink: 3;
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+   <div class="box box1"> box1</div>
+   <div class="box box2"> box2</div>
+   <div class="box box2"> box3</div>
+   <div class="box box4">box4</div>
+</div>
+</body>
+</html>
