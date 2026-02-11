@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate</title>
+    <style>
+        .box1{
+            background-color: brown; 
+            height: 400px;
+            width: 400px;
+        }
+        .box2{
+            background-color: black;
+            height: 100px;
+            width:100px;
+            border-radius: 0px;
+            transition-property: transform;
+            transition-duration: 5s; 
+            /* transition-timing-function: ease; */
+            
+
+        }
+        .box2:hover{
+            transform: rotate3d(1, 1, 1, 180deg);
+            border-radius: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

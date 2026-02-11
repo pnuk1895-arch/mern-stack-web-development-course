@@ -1,0 +1,35 @@
+<!-- Q1)what is selector: active?
+ans)The CSS :active pseudo-class selects an element that is currently being activated by the user, typically when the user presses and holds the primary mouse button (e.g., a left-click) on it -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>active</title>
+    <style>
+        .box1{
+            background-color: black;
+            height: 200px;
+            width: 200px;
+        }
+      button{
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        position: relative;
+      }
+      button:active{
+        background-color: red;
+        border-radius: 10px;
+        left: 100px;
+        right: 100px;
+      }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <button>this is my login</button>
+    </div>
+</body>
+</html>

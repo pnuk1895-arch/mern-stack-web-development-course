@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate</title>
+    <style>
+        .box1{
+            background-color: black;
+            height: 400px;
+            width: 400px;
+        }
+        .box2{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            transition-property:all;
+            transition-duration:4s ;
+            transition-timing-function:ease;
+            /* transition-delay: 1; */
+
+        }
+
+        .box2:hover{
+            background-color: blue;
+            color: white;
+            transform: translatey(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+        this is me
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Webpage</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive & Dynamic Website</h1>
+
+  <input type="text" id="search" placeholder="Search here">
+  <br>
+  <button onclick="searchData()">Search</button>
+  <button onclick="sayHello()">Click Me</button>
+
+  <p id="result"></p>
+
+  <script>
+    function sayHello() {
+      alert("Button is working because of JavaScript!");
+    }
+
+    function searchData() {
+      let value = document.getElementById("search").value;
+      document.getElementById("result").innerText =
+        "You searched for: " + value;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate</title>
+    <style>
+        .box1{
+            /* background-color: brown;  */
+            height: 400px;
+            width: 400px;
+            perspective: 100px;
+            position: relative;
+
+        }
+        .box2{
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            background-color: black;
+            height: 100px;
+            width:100px;
+            border-radius: 0px;
+            transition-property: transform;
+            transition-duration: 10s; 
+            transition-timing-function: ease;
+         }
+         .box2:hover{
+             transform: rotateY(160deg);
+         }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

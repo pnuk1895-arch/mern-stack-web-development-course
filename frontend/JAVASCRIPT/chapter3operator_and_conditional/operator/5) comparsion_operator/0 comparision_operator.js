@@ -1,0 +1,1 @@
+// Comparison operators are symbols used in programming and databases to compare two values

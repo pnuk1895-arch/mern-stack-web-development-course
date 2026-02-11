@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            position: relative;
+            perspective: 800px;
+            /* perspective-origin: top, right ; */
+        }
+        .cube{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 500px;
+            top: 300px;
+            transform-style: preserve-3d;
+            transition-duration: 3s;
+            transition-property:all ;
+            transition-timing-function: ease;
+            /* transform: rotateY(-90deg); */
+        }
+        .cube:hover{
+            transform: rotateX(270deg);
+
+        }
+        .face{
+                background-color: rgba(0, 0, 255, 0.5);
+                height: 200px;
+                width: 200px;
+                position: absolute;
+                border: 2px solid white;
+        }
+        .front{ transform:translateZ(50px); }
+        .back{ transform: translateZ(-48px);}
+        .left{transform: rotateY(90deg) translateZ(-48px); width: 96px;}
+        .right{ transform: rotateY(90deg) translateZ(152px); width: 96px;}
+        .top{ transform: rotateX(90deg) translateZ(48px); height:96px;}
+       .bottom{ transform: rotateX(90deg) translateZ(-152px); height:96px;}
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

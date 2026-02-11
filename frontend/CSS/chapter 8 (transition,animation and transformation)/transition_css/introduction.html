@@ -1,0 +1,50 @@
+<!-- what is css transtion -->
+
+A CSS transition is used to make changes a state of any html element  between two states(intial and final state) smooth and gradual on user action(like:-hover,active,focus and visited) instead of happening instantly.
+
+In simple words:
+
+Transition makes the change of  state value  (like color, size, or position) happen slowly and smoothly over time.
+
+
+<!-- Example: Without vs With Transition -->
+
+<!-- Without transition (instant change) -->
+button:hover {
+  background-color: red;
+}
+-> The color changes suddenly when you hover.
+
+
+<!-- With transition (smooth change) -->
+button {
+  background-color: blue;
+  transition: background-color 0.5s; /* 0.5 seconds smooth effect */
+}
+
+button:hover {
+  background-color: red;
+}
+
+->The color changes gradually from blue → red.
+
+<!-- follwing are the transition property we used in transition -->
+
+1)transtion-property:The CSS property to animate 
+example:color,background-color,width etc.
+
+2)transtion-duration:How long the change takes	               
+example:1s, 0.5s
+
+3)transition-timing-function:Speed pattern of animation	           
+example:ease, linear, ease-in, ease-out etc
+
+4)transion-delay:Wait time before transition starts	            
+example:0s, 1s
+
+
+
+
+<!-- shorthand  transtion property   -->
+
+transition: property duration timing-function delay;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        body{ 
+            height: 100vh;
+            /* display: flex;
+            justify-content: center; */
+
+        }
+        .box{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            animation-name: works;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+       @keyframes works{
+       0%
+       { transform: translate(0px ,0px);
+        background-color: blue;
+        }
+       25%
+       {transform: translate(1000px,0px); 
+        background-color: red;
+        }
+        50%
+        {transform: translate(1000px,500px);
+            background-color: brown;
+
+        }
+        75%
+        { transform: translate(0px ,500px);
+
+        }
+        100%
+        {transform: translate(0px,0px);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+    </div>
+</body>
+</html>

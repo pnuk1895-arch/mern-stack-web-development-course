@@ -1,0 +1,40 @@
+<!-- Q1)what is selector:focus ? -->
+ <!-- ans) The CSS :focus pseudo-class selects an element when it has received user input focus -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus</title>
+    <style>
+        .box{
+            background-color:black;
+            height: 300px;
+            width: 300px;
+        }
+        button{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 100px;
+
+        }
+        button:focus{ background-color: blue;
+            border-radius: 10px;
+            border: 0px;
+            left: 100px;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button>submit</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .scene{
+        perspective: 500px;
+    }
+
+    .cube{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        left: 500px;
+        top: 250px;
+        transition-property: all;
+        transition-duration: 4s;
+        transition-timing-function: ease;
+        box-shadow: 2px black;
+    }
+    
+    .face{
+        position: absolute;
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        background-color: rgba(0, 0, 255, 0.7);
+        border: 2px solid #fff;
+    }
+    
+    .front{ transform: translateZ(25px);}
+    .back{ transform: rotateY(180deg) translatez(25px);}
+    .left { transform: rotateY(-90deg) translateZ(25px); width: 50px;} 
+    .right{transform: rotateY(90deg) translateZ(125px) ; width: 50px;}
+    .top{ transform: rotateX(90deg) translateZ(25px); height: 50px}
+    .bottom{ transform: rotateX(-90deg) translateZ(125px); height: 50px;} 
+
+     .cube:hover{
+            /* transform: scale(0.5); */
+            transform:  scale3d(1.5, 2, 4);
+            /* transform: pespective(600px) scale3d(1.5, 1.5, 1.5); */
+           /* transform:scaleX(0.5);  */
+           /* 1 is a default value and above the 1 and below the 2 in enlarge elements */
+           /* 0 to 1 in shrink the elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <span class="face front"></span>
+            <span class="face back"></span>
+            <span class="face top"></span>
+            <span class="face bottom"></span>
+            <span class="face left"></span>
+            <span class="face right"></span>
+        </div>
+    </div>
+</body>
+</html>
