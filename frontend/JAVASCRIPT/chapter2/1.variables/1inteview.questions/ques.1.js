@@ -1,0 +1,10 @@
+// which type of data null is
+
+// ans:it should be null but when we try to check it's data type then it give object 
+
+//why it give object
+//ans:bcz it is a error or bug in java script from the inevention of java script 
+
+
+let name=null
+console.log(typeof name)
