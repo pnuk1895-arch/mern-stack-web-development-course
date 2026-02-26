@@ -1,0 +1,40 @@
+<!-- What is DOM api -->
+The DOM API (Document Object Model API) allows  JavaScript to interact and modifi the HTML document inside the browser dynamically.
+
+
+
+<!--1)Access html elements -->
+
+<!--a)accessing a html element using Id name  -->
+Returns only one element not collection.
+IDs must be unique.
+if there is no target id than it will  return the null.
+
+<!-- example -->
+document.getElementById("title");
+
+<!-- b) accessing a html element using class name-->
+It returns a collection, not a single element.
+They can be anywhere in the document
+They do NOT need to be at the same level (not necessarily siblings)
+Can be chiled element in  different parent elements
+if there is no target class than it return collection with lenght 0
+
+<!--example -->
+document.getElementsByClassName("box");
+
+<!--c)accessing a html element using tag name  -->
+It work simliar to class name 
+
+<!-- example -->
+document.getElementsByTagName("p");
+
+
+
+
+<!--But to access a html element using dom api it is recommend to use querySelector() or querySelectorAll() bcz it allow us to accsess html element  as id,class and tag name -->
+<!--example-->
+
+querySelector("id/class/tagname")//it return first element.
+
+querySelectorAll()//it return array of element.

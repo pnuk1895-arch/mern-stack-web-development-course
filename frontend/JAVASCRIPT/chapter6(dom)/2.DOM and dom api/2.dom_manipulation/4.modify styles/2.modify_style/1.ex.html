@@ -1,0 +1,36 @@
+<!-- 4️⃣ Correct Way to Access External CSS Styles -->
+<!-- window.getComputedStyle(element) -->
+<!-- it work for Inline + External + Internal CSS -->
+
+<!-- question:exccess the external css using getComputedstyle() and try to modifi the existing css  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./2.ex.css">
+</head>
+<body>
+    <div id="name" class="box">this is priyanshu</div>
+    <script>
+        let element=document.querySelector("div")
+        console.log(element)
+         let style= window.getComputedStyle(element)
+         console.log(style)
+         console.log(style.backgroundColor)
+         console.log(style.width)
+         console.log(style.height)
+         console.log(style.border)//it will not change the width because getComputedStyle() returns a read-only object.
+
+    </script>
+</body>
+</html>
+
+
+<!-- conclustion: -->
+<!-- getComputedStyle() returns a read-only object. -->
+ <!-- To modifi the style wheather it is external ,internal,and inline we    should use element.style property instead. -

@@ -1,0 +1,21 @@
+<!--getting html elment(tag)name -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <div id="myDiv">
+          box
+      </div> 
+      <script>
+            const myDiv = document.getElementById("myDiv");
+            console.log(myDiv.tagName); // DIV
+            // myDiv.tagName = "p"; // tagName is read-only, this line will not change the tag name
+            // console.log(myDiv.tagName); // still DIV
+      </script>
+</body>
+</html>
