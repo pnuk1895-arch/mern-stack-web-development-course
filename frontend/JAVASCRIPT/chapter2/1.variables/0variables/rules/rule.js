@@ -8,4 +8,3 @@
 
 //best practice to write a java script variable name in camel case 
 
-

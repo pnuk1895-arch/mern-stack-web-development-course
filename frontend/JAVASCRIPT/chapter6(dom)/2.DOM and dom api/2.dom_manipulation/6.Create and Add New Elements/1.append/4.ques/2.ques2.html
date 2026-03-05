@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Name">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus perferendis obcaecati odit ea dolorem, doloremque eligendi? Odio minus iste rerum, esse inventore assumenda minima error expedita commodi eum enim fugit?
+        </p>
+    </div>
+    <button class="btm">Add PARA</button>
+
+    <script>
+
+        let element= document.querySelector("div")
+        // console.log(element)
+        let but= document.querySelectorAll(".btm")
+        // console.log(but)
+
+            but[0].addEventListener("click",()=>{
+                let para1= document.createElement("p")
+                         para1.innerText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus perferendis obcaecati odit ea dolorem, doloremque eligendi? Odio minus iste rerum, esse inventore assumenda minima error expedita commodi eum enim fugit?"
+                let para2= document.createElement("p")
+                     para2.innerText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus perferendis obcaecati odit ea dolorem, doloremque eligendi? Odio minus iste rerum, esse inventore assumenda minima error expedita commodi eum enim fugit?"
+                element.appendChild(para1,para2)
+            })
+    </script>
+</body>
+</html>

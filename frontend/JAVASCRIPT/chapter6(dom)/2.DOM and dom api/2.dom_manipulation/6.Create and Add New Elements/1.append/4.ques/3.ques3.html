@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>HELLO EVERYONE</p>
+    </div>
+    <button class="btn">click to add</button>
+    <SCRIPT>
+        // let fun= document.querySelector(".box")
+        // console.log(fun)
+        // let but= document.querySelector(".btn")
+        // console.log(but)
+        let fun= document.getElementsByClassName(".box")
+        console.log(fun)
+        let but= document.querySelector(".btn")
+        console.log(but)
+
+          but.addEventListener("click",()=>{
+            let para1=document.createElement("div")
+            para1.style.backgroundColor="blue"
+            para1.style.height="200px"
+            para1.style.width="200px"
+                    
+
+            let pre= document.createElement("p")
+            pre.innerText="this is priyanshu"
+            fun.append(para1,pre)
+                                
+        })
+
+    </SCRIPT>
+</body>
+</html>

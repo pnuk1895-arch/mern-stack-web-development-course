@@ -4,8 +4,6 @@
 
 <!-- question:exccess the external css using getComputedstyle() and try to modifi the existing css  -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +16,14 @@
     <div id="name" class="box">this is priyanshu</div>
     <script>
         let element=document.querySelector("div")
-        console.log(element)
-         let style= window.getComputedStyle(element)
-         console.log(style)
-         console.log(style.backgroundColor)
-         console.log(style.width)
-         console.log(style.height)
-         console.log(style.border)//it will not change the width because getComputedStyle() returns a read-only object.
-
+                console.log(element)
+        let style= window.getComputedStyle(element)
+                console.log(style)
+                console.log(style.backgroundColor)
+                console.log(style.width)
+                console.log(style.height)
+                console.log(style.border)
+                //it will not change the width because getComputedStyle() returns a read-only object.
     </script>
 </body>
 </html>

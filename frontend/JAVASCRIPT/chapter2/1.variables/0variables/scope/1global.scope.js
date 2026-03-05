@@ -6,7 +6,7 @@ let a=3
 function fun()
 { 
     {
-        let
+        console.log(a)
     }
 }
 fun()
