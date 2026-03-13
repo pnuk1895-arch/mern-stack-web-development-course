@@ -1,4 +1,7 @@
 <!-- handling mouse events using addEventListener method -->
+
+
+
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,22 +13,22 @@
     <input type="text" id="myinput" placeholder="enter something">
     <button>this is button</button>
     <script>
-        let element=document.querySelector("button")
-
+        let element=document.querySelector("#myinput")
+        // console.log(element)
      // on key down event
-        element.addEventListener("keydown",()=>{
-                console.log(`any key was pressed`)
-        })
+        // element.addEventListener("keydown",(e)=>{
+        //         console.log(`any key was pressed ${e.key}`)
+        // })
 
     //  On keypress event
-        //  element.addEventListener("keypress",()=>{
-        //         console.log("anyone key was pressed")
+        //  element.addEventListener("keypress",(e)=>{
+        //         console.log(`anyone key was pressed ${e.key}`)
         // })
 
     //On keyup event
-        //  element.addEventListener("keydown",()=>{
-        //         console.log("anyone key was pressed")
-        // })
+         element.addEventListener("keydown",(e)=>{
+                console.log(`anyone key was pressed ${e.key}`)
+        })
 
 </script>
 </body>

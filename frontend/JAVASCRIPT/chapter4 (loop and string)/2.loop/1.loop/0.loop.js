@@ -17,7 +17,7 @@
 // 1)for loop
 // for(variable intilaize;condn;incement expresstion)
 // {
-//     //task
+//     //task 
 // }
 
 
