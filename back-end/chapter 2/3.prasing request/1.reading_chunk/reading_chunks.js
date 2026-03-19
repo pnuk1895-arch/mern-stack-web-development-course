@@ -35,11 +35,11 @@ let server=http.createServer((req,res)=>{
 
     //handling a form data
     else if(req.url=="/submitted")
-    {
-      res.setHeader("content-type","text/html")
-      res.write(`your form is succussfully submitted`)
-      console.log("your form is succssfully submitted")
-      res.end()
+    {  
+      // reading a chunks
+        req.on("data",(chunk)=>{
+          console.log(chunk)
+        })
     }
 })
 let port=3010

@@ -1,0 +1,14 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "I am Creating my first server",
+  "license": "ISC",
+  "author": "Priyanshu negi",
+  "type": "commonjs",
+  "main": "2.app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node 2.app.js",
+    "suru_hoja_bhai":"node 2.app.js"
+  }
+}
