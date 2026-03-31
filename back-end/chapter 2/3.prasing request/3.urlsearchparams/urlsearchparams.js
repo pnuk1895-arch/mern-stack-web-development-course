@@ -59,20 +59,18 @@ const server=http.createServer((req,res)=>{
         const params= new URLSearchParams(stringForm)
         console.log(params)
 
-        // now we have to convert this in JS object 
-        let jsobject={ }
-        for(const item of params.entries())
-            {
-                console.log(item)
-                const [key,value]=item
-                 jsobject[key]=value
+        console.log(params.entries())
+
+        const object={}
+        for(let item of params.entries())
+           {
+             console.log(item)
+             let [key,values]=item
+             object[key]=values
             }
-       console.log(jsobject)
-       console.log(jsobject.userName)
-       console.log(jsobject.gender)
-       res.end()
-       }
-      )
+
+        console.log(object)
+  })
   }
 })
 

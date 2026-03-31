@@ -1,0 +1,11 @@
+<!-- Where user sends a data(search Url and form data)	than Where we can   access it in request object -->
+
+<!--  -->
+
+1)path or routes or endpoint:req.params
+2)Query-string:req.query
+4)Headers:req.headers
+5)Cookies:req.cookies
+
+<!-- form data -->
+3)Request-body:req.body

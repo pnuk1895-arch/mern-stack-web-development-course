@@ -1,0 +1,13 @@
+//1)create a new node.js project named "calculator"
+
+//2)on the home page ("/route"),shows a welcome message and a
+//link to the calculator page
+
+//3) on the "/calculator" page,display a form with two input filed and a "sum" button.
+
+// 4) when the user clicks the "sum" button,they should be taken to the "/calculator-result" page,which shows the sum of the two number.
+
+// note:
+//create saparate module for the addition function 
+// create another module to handle incoming request
+// on the "calculator-result" page parse the user input,use the addition module to calculate the sum,and display the result on new html page 

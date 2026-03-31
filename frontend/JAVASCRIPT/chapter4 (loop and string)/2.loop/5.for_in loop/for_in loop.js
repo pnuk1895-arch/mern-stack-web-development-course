@@ -8,7 +8,7 @@ let object={
     city:"delhi"
 }
 
-for(let property in object)
+for(let key in object)
 {
-       console.log(object[property])
+       console.log(key)
 }

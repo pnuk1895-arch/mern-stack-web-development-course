@@ -1,0 +1,16 @@
+{
+  "name": "2.calculator",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "priyanshu negi",
+  "type": "commonjs",
+  "main": "aap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon aap.js"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
