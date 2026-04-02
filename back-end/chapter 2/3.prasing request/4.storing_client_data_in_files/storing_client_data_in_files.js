@@ -6,7 +6,7 @@ const fs=require("fs")
 const path=require("path")
 
 const server=http.createServer((req,res)=>{
-  if(req.url==="/")
+  if(req.url === "/")
   {
 
           res.write(`
@@ -76,7 +76,20 @@ const server=http.createServer((req,res)=>{
 
         res.end() 
 
-       })
+          if(error)
+          { 
+            res.setHeader("content-type","text/html")
+            res.write("error while submitting a data")
+            console.log("error while submitting a data") 
+          }
+          else
+          {
+            res.setHeader("content-type","text/html")
+            res.write("data submitted successfully")
+            console.log("data submitted successfully")
+            res.end 
+          }
+        }) 
      
   }
 })
