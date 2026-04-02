@@ -1,0 +1,13 @@
+body{
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.box{
+    width: 308px;
+    height: 100px;
+    text-align: center;
+}

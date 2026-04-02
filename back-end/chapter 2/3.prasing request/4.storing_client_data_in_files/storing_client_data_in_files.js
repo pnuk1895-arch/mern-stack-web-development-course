@@ -73,9 +73,10 @@ const server=http.createServer((req,res)=>{
             res.setHeader("content-type","text/html")
             res.write("data submitted successfully")
             console.log("data submitted successfully")
+            res.end 
           }
         }) 
-        res.end   
+          
        })
      
   }
