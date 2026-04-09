@@ -9,21 +9,20 @@ app.get("/",(req,res)=>{
 
     const welcomePath=path.join(__dirname,"./pages/1.welcome_pages/index.html")
 
-    fs.readFile(welcomePath,"utf-8",(error,data)=>{
-        if(error)
-        {
-            res.send("oops! Something went wrong")
-            console.log(`error found ${error}`)
-        }
-        else 
-        {
-            res.send(data)
-            console.log(`welcome html page landed perfectly`)
-            
-        }
-    })
-
-}) // welcome html pages codes end here
+    fs.readFile(welcomePath,"UTF-8",(error,data)=>{
+            if(error)
+            {
+                res.send("oops! Something went wrong")
+                console.log(`error found ${error}`)
+            }
+            else 
+            {
+                res.send(data)
+                console.log(`welcome html page landed perfectly ; ${data}`)
+            }
+        }) 
+        
+})// welcome html pages codes end here
 
 app.get("/welcomeCss",(req,res)=>{
 
@@ -46,7 +45,7 @@ app.get("/Add_home",(req,res)=>{
 
     const homeHtmlPath=path.join(__dirname,"./pages/2.home_pages/index.html")
 
-    fs.readFile(homeHtmlPath,"utf-8",(error,data)=>{
+    fs.readFile(homeHtmlPath,(error,data)=>{
          if(error)
         {
             res.send("oops something went wrong, try again later")
@@ -64,7 +63,7 @@ app.post("/submit",(req,res)=>{
 
     const submitHtmlPath=path.join(__dirname,"./pages/3.result_pages/index.html")
 
-    fs.readFile(submitHtmlPath,"utf-8",(error,data)=>{
+    fs.readFile(submitHtmlPath,(error,data)=>{
         if(error)
         {
             res.send("oops, something went wrong. Try Again later")
@@ -82,5 +81,10 @@ app.post("/submit",(req,res)=>{
 
 const port=30001
 app.listen(port,()=>{
-    console.log("my server is running")
+    console.log(`server is listen at: ${port}`)
 })
+
+
+
+
+
