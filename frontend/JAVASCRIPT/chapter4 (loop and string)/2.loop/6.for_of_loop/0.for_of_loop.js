@@ -14,12 +14,19 @@ let obj={
 }
 
 
+<<<<<<< HEAD
 for(let [key,values] of Object.entries(obj) )
 
 {
     console.log(person)
-}
+=======
+for(let key of Object.entries(obj) )
 
+{
+    console.log(key)
+>>>>>>> 0d1a30a (added new files)
+}
+//  console.log(Object.entries(obj))
 //generally we don't apply "for of loop" on object because "for of loop" only work on iteriable object.
 
 //but of iterable we want to apply then, we

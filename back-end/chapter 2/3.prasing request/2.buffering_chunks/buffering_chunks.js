@@ -45,7 +45,7 @@ const server=http.createServer((req,res)=>{
           body.push(chunk)
           console.log("this is a array of chunk:", body )
        })
-
+       
        req.on("end",()=>{
          const concatinate_chunks=Buffer.concat(body)
          console.log(concatinate_chunks)
