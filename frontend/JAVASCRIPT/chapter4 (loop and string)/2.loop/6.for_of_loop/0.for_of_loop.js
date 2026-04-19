@@ -14,12 +14,12 @@ let obj={
 }
 
 
-for(let properties of Object.entries(obj) )
+for(let key of Object.entries(obj) )
 
 {
-    console.log(properties)
+    console.log(key)
 }
-
+//  console.log(Object.entries(obj))
 //generally we don't apply "for of loop" on object because "for of loop" only work on iteriable object.
 
 //but of iterable we want to apply then, we
