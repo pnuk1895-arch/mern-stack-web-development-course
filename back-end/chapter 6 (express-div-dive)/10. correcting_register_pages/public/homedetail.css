@@ -1,0 +1,133 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* HEADER */
+.header {
+  background: white;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  color: #ff385c;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TITLE */
+.title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* TOP INFO */
+.top_info {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT */
+.left {
+  flex: 2;
+}
+
+.left h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.left p {
+  color: #444;
+}
+
+/* AMENITIES */
+.amenities {
+  list-style: none;
+}
+
+.amenities li {
+  margin-bottom: 6px;
+}
+
+/* BOOKING BOX */
+.booking_box {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.booking_box h2 {
+  margin-bottom: 15px;
+}
+
+.booking_box span {
+  color: gray;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.book_btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book_btn:hover {
+  background: #e03150;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+}

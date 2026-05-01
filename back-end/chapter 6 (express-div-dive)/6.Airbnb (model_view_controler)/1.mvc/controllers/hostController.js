@@ -1,5 +1,5 @@
 const path=require("path")
-const {Home}=require("../model/model")
+const {Home}=require("../model/model.js")
 
 
 function registerForm(req,res){

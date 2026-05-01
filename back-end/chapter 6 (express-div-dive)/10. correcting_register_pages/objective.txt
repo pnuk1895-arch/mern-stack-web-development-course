@@ -1,0 +1,3 @@
+here what we will be do
+
+as data comes in registration.json file from the user registration know we have to modify the user register page 

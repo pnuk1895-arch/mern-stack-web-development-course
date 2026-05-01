@@ -39,14 +39,14 @@ class Home{
     {
         let filePath=path.join(__dirname,"./database/registerData.json")
 
-        fs.readFile(filePath,(error,data)=>{
+        fs.readFile(filePath,"utf-8",(error,data)=>{
             if(error)
             {
-                callback(error)
+                callback(error,data)
             }
             else
             {
-                callback("data fetch successfully")
+                callback(error,data,)
             }
         })
     }

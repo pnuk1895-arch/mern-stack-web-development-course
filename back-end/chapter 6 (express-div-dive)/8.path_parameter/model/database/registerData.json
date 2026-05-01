@@ -1,0 +1,119 @@
+[
+    {
+        "_id":"1",
+        "homeName":"3bhk",
+        "Location":"delhi",
+        "pricePerNight":"11000",
+        "rating":"8",
+         "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      ],
+        "photourl":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/434814789.jpg?k=a998f8938c5cd8f428d6c8aebab9c0e5a70827399f41d0c28543c89b4c69ed8a&o=",
+         "reviews": 124,
+      "description": "Enjoy a luxurious stay in the heart of the city with a stunning skyline view. Perfect for couples and business travelers.",
+      "amenities": [
+        "WiFi",
+        "Air Conditioning",
+        "Kitchen",
+        "Washing Machine",
+        "Free Parking"
+      ],
+      "host": {
+        "name": "Amit Sharma",
+        "joined": "2022",
+        "superhost": true
+      }
+
+    },
+
+     {
+        "_id":"2",
+        "homeName":"press apartment",
+        "Location":"delhi",
+        "pricePerNight":"11000",
+        "rating":"8",
+         "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      ],
+        "photourl":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/434814789.jpg?k=a998f8938c5cd8f428d6c8aebab9c0e5a70827399f41d0c28543c89b4c69ed8a&o=",
+         "reviews": 124,
+      "description": "Enjoy a luxurious stay in the heart of the city with a stunning skyline view. Perfect for couples and business travelers.",
+      "amenities": [
+        "WiFi",
+        "Air Conditioning",
+        "Kitchen",
+        "Washing Machine",
+        "Free Parking"
+      ],
+      "host": {
+        "name": "Amit Sharma",
+        "joined": "2022",
+        "superhost": true
+      }
+
+    },
+
+     {
+        "_id":"3",
+        "homeName":"Luxury apartment",
+        "Location":"delhi",
+        "pricePerNight":"11000",
+        "rating":"8",
+         "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      ],
+        "photourl":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/434814789.jpg?k=a998f8938c5cd8f428d6c8aebab9c0e5a70827399f41d0c28543c89b4c69ed8a&o=",
+         "reviews": 124,
+      "description": "Enjoy a luxurious stay in the heart of the city with a stunning skyline view. Perfect for couples and business travelers.",
+      "amenities": [
+        "WiFi",
+        "Air Conditioning",
+        "Kitchen",
+        "Washing Machine",
+        "Free Parking"
+      ],
+      "host": {
+        "name": "Amit Sharma",
+        "joined": "2022",
+        "superhost": true
+      }
+
+    },
+
+     {
+        "_id":"4",
+        "homeName":"1st floor",
+        "Location":"delhi",
+        "pricePerNight":"11000",
+        "rating":"8",
+         "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      ],
+        "photourl":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/434814789.jpg?k=a998f8938c5cd8f428d6c8aebab9c0e5a70827399f41d0c28543c89b4c69ed8a&o=",
+         "reviews": 124,
+      "description": "Enjoy a luxurious stay in the heart of the city with a stunning skyline view. Perfect for couples and business travelers.",
+      "amenities": [
+        "WiFi",
+        "Air Conditioning",
+        "Kitchen",
+        "Washing Machine",
+        "Free Parking"
+      ],
+      "host": {
+        "name": "Amit Sharma",
+        "joined": "2022",
+        "superhost": true
+      }
+
+    }
+    
+   
+]

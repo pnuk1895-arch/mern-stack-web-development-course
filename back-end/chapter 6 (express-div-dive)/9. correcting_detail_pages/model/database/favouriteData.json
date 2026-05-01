@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "f1",
+    "userId": "u1",
+    "property": {
+      "_id": "p1",
+      "title": "Luxury Apartment with City View",
+      "location": "Delhi, India",
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "pricePerNight": 2500,
+      "rating": 4.8
+    },
+    "createdAt": "2026-04-20T10:30:00Z"
+  },
+  {
+    "_id": "f2",
+    "userId": "u1",
+    "property": {
+      "_id": "p2",
+      "title": "Beach House with Private Pool",
+      "location": "Goa, India",
+      "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+      "pricePerNight": 5000,
+      "rating": 4.9
+    },
+    "createdAt": "2026-04-22T12:00:00Z"
+  }
+]

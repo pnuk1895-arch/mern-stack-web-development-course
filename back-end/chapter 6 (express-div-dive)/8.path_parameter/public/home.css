@@ -1,0 +1,214 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f7f7f7;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* NAVBAR */
+.header_navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ff385c;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+/* NAV ITEMS */
+.header_nav_items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header_nav_items .item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.header_nav_items .item a:hover {
+  background: #f2f2f2;
+  color: #ff385c;
+}
+
+/* ===== MAIN ===== */
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.main_heading {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ===== CARDS GRID ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* ===== IMAGE WRAPPER ===== */
+.card_img_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.card_img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER ZOOM */
+.card:hover .card_img {
+  transform: scale(1.08);
+}
+
+/* HEART ICON */
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 6px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+/* ===== CARD BODY ===== */
+.card_body {
+  padding: 12px;
+}
+
+/* TOP ROW */
+.card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* LOCATION */
+.card_location {
+  color: #717171;
+  font-size: 13px;
+}
+
+/* RATING */
+.card_rating {
+  font-size: 13px;
+}
+
+/* TITLE */
+.card_title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* PRICE */
+.card_price {
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card_price span {
+  color: #717171;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/* BUTTON */
+.card_body button {
+  margin-top: 8px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff385c;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card_body button:hover {
+  background: #e03150;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header_nav_items {
+    gap: 12px;
+  }
+
+  .main_heading {
+    font-size: 22px;
+  }
+
+  .card_img {
+    height: 160px;
+  }
+}
