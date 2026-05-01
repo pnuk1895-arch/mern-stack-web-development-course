@@ -1,6 +1,6 @@
 const mongoose=require("./mongoose")
 
-let object= new mongoose("vinod_nagar",5000,7)
+let object= new mongoose("delhi",3000,5)
 
 object.save((error)=>{
     if(error)
@@ -14,26 +14,17 @@ object.save((error)=>{
 })
 
 object.fetch((error,data)=>{
-    if(error)
-    {
-        console.log(error)
-    }
-    else
-    {
-        console.log("data save successfully")
-    }
-})
+                if(error)
+                {
+                    console.log(error)
+                }
+                else
+                {
+                    console.log("fetch save successfully",data)
+                }
+            })
 
-
-
-
-
-
-
-
-
-
-
+    
 
 
 

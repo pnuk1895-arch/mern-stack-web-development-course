@@ -1,0 +1,11 @@
+//struture the view folder into the host and user folders and move the respective files into those folders
+
+//add homeList,homeDetail,favouriteList,reserve,bookings into the view/user folder
+
+//add editHome,hostHomeList into the view/host folder.
+
+//imrpove the header with navigation to all pages.
+
+//add a book button in homePage
+
+//add a edit and delete button in hostHomeListPage

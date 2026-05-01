@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Details</title>
+  <link rel="stylesheet" href="/homeDetail.css">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <h2 class="logo">airbnb</h2>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Title -->
+  <h1 class="title"><%= home.homeName %></h1>
+
+  <!-- Location + Rating -->
+  <div class="top_info">
+    <span>📍 <%= home.location %></span>
+    <span>⭐ <%= home.rating %> (<%= home.reviews %> reviews)</span>
+  </div>
+
+  <!-- Image Gallery -->
+   <div class="gallery">
+  <% home.images.forEach(img => { %>
+    <img src="<%= img %>" alt="home image">
+  <% }) %>
+</div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Left -->
+    <div class="left">
+
+      <h3>Description</h3>
+      <p><%= home.description %></p>
+
+      <h3>Amenities</h3>
+      <ul class="amenities">
+        <% home.amenities.forEach(item => { %>
+          <li>✔ <%= item %></li>
+        <% }) %>
+      </ul>
+
+      <h3>Host</h3>
+      <p>
+        Hosted by <strong><%= home.host.name %></strong>  
+        (<%= home.host.joined %>)  
+        <% if(home.host.superhost){ %> ⭐ Superhost <% } %>
+      </p>
+
+    </div>
+
+    <!-- Right Booking Box -->
+    <div class="booking_box">
+
+      <h2>₹<%= home.pricePerNight %> <span>/ night</span></h2>
+
+      <button class="book_btn">Reserve</button>
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

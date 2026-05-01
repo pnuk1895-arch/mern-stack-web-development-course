@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/home.css">
+  <title>Air Bnb</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="header_navbar">
+            <ul class="header_nav_items">
+              <li class="header_nav_items_item1 item"><a href="/">Home</a></li>
+               <li class="header_nav_items_item2 item"><a href="/host/add-home">Add Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content -->
+     <main class="main">
+
+  <h1 class="main_heading">Here Are our registered homes:</h1>
+ 
+  <div class="cards">
+    <% parse.forEach(home => { %>
+      <div class="card">
+        <img src="<%= home.photourl %>" alt="home image" class="card_img">
+
+        <div class="card_body">
+          <h2 class="card_title"><%= home.homeName %></h2>
+
+          <p class="card_location">📍 <%= home.Location %></p>
+
+          <p class="card_price">
+            ₹<%= home.pricePerNight %> / night
+          </p>
+
+          <p class="card_rating">
+            ⭐ <%= home.rating %> / 10
+          </p>
+        </div>
+      </div>
+    <% }) %>
+</div>
+
+  
+</main>
+
+</body>
+</html>
+    

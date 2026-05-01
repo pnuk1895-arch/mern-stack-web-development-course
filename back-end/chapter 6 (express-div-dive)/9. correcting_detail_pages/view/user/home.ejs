@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/home.css">
+  <title>Document</title>
+</head>
+<body> 
+</body>
+<header class="header">
+  <nav class="header_navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="logo">
+      <span>airbnb</span>
+    </div>
+
+    <ul class="header_nav_items">
+      <li class="item"><a href="/">Home</a></li>
+      <li class="item"><a href="/registerHome">Add Home</a></li>
+      <li class="item"><a href="/booking">Booking</a></li>
+      <li class="item"><a href="/favourite">Favourites</a></li>
+      <li class="item"><a href="/hostHomeList">Host Homes</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<main class="main">
+
+  <h1 class="main_heading">Here Are our registered homes:</h1>
+  <div class="cards">
+
+  <% parse.forEach(home => { %>
+
+    <a href="/home/details/<%=home._id %>" class="card_link">
+
+      <div class="card">
+
+        <!-- Image Wrapper -->
+        <div class="card_img_wrapper">
+          <img src="<%= home.photourl %>" alt="home image" class="card_img">
+          <div class="heart">❤️</div>
+        </div>
+
+        <div class="card_body">
+
+          <div class="card_top">
+            <span class="card_location">📍 <%= home.Location %></span>
+            <span class="card_rating">⭐ <%= home.rating %></span>
+          </div>
+
+          <h2 class="card_title"><%= home.homeName %></h2>
+
+          <p class="card_price">
+            ₹<%= home.pricePerNight %> <span>/ night</span>
+          </p>
+        </div>
+      </div>
+
+    </a>
+
+  <% }) %>
+
+</div>
+ </a>
+
+</main>
+</html>
