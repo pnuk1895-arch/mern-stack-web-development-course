@@ -1,0 +1,2 @@
+//delete element
+node.remove()

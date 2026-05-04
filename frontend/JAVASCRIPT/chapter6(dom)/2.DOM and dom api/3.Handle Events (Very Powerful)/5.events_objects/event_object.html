@@ -1,0 +1,23 @@
+<!-- Event Object -->
+<!-- When an event occurs, JavaScript automatically provides an   event object with information about that event. -->
+<!-- Example: -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event object</title>
+  </head>
+  <body>
+    <button>Click Me</button>
+    <script>
+      let button = document.querySelector("button");
+      button.addEventListener("click", (e)=>{
+        console.log(e)
+        console.log("Event Type:", e.type);
+        console.log("Clicked Element:", e.target);
+
+      });
+      </script>
+  </body>
+</html>

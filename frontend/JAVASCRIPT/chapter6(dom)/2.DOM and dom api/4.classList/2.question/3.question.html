@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .heighlight{
+        background-color: blue;
+        color: white;
+      }
+      .bigfont{
+        font-size: 20px;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      .border{
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+    <p id="para" class="heighlight">This is a paragraph</p>
+    <button id="bigfont">big font</button>
+    <button id="bold">bold</button>
+    <button id="border">border</button>
+     <script>
+       //Getting the paragraph element
+        let para=document.querySelector("#para")
+        console.log(para)
+
+      //adding event listener(event handler) for click event on the "big font" button
+        let element=document.querySelector("#bigfont")
+        element.addEventListener("click", function() {
+            para.classList.toggle("bigfont");
+        })
+      //adding event listener(event handler) for click event on the "bold" button
+         let boldButton=document.querySelector("#bold")
+          boldButton.addEventListener("click", function() {
+            para.classList.toggle("bold");
+          });
+      //adding event listener(event handler) for click event on the "border" button
+        let borderButton=document.querySelector("#border")
+        borderButton.addEventListener("click", function() {
+            para.classList.toggle("border");
+        });
+      </script>
+</body>
+</html>
