@@ -41,7 +41,7 @@
         <!-- Image Wrapper -->
         <div class="card_img_wrapper">
           <img src="<%= home.photourl %>" alt="home image" class="card_img">
-          <a href="/favourite/<%= home._id %>" class="heart">❤️</a>
+          <a href="/favourite/<%= home._id %>" class="heart"  myId="<%= home._id %>" >❤️</a>
         </div>
 
         <div class="card_body">
@@ -66,4 +66,33 @@
 </div>
 
 </main>
+     <script>
+                 const hearts=document.querySelectorAll(".heart")
+                 hearts.forEach((heart)=>{
+                     heart.addEventListener("click",(e)=>{
+                           e.preventDefault()
+                           const homeId=e.target.dataset.id
+                           const promise =fetch(`/favourite/${homeId}`)
+                           console.log(promise)
+                           promise.then((res)=>{
+                              // first we have to read the indivisual chunk
+                              let addData=[]
+                              const decoder=new TextDecoder()
+
+                              
+                                const promiseRead=res.body.getReader().read()
+                                promiseRead.then((result)=>{
+                                addData.push(result.value)
+                              
+
+                              
+                           }).catch((error)=>{
+                                console.log(error)
+                           })
+
+
+                     })
+                 })
+                })
+     </script>
 </html>

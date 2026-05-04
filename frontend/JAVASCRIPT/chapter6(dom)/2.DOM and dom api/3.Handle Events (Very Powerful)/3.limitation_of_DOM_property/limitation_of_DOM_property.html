@@ -1,0 +1,23 @@
+<!--limitaion of dom property event handler -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>limitaion of dom property event handler</title>
+</head>
+<body>
+        <button id="myButton">Click Me</button>
+        <script>
+              const button = document.getElementById('myButton');
+              //on click event
+              button.onclick = function() {
+                  console.log('performing task 1');
+              };
+              // on click event again (overwrites previous handler)
+              button.onclick = function() {
+                  console.log('performing task 2 (overwrites previous handler)');
+              };
+        </script>  
+</body>
+</html>

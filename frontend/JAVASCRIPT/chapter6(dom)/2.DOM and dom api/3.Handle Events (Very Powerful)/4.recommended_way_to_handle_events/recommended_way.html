@@ -1,0 +1,25 @@
+<!-- recommonded way to handle events is using addEventListener method. It allows you to attach multiple event handlers to the same event and element, and provides better control over event propagation and default behavior. Here's an example of how to use addEventListener to handle form events: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+       <button id="myButton">Click Me</button>
+       <script>
+              const button = document.getElementById('myButton');
+              button.addEventListener('click', function() {
+                  console.log('performing task 1');
+              });
+              button.addEventListener('click', function() {
+                  console.log('performing task 2 (does not overwrite previous handler)');
+              });
+
+       </script>
+</body>
+</html>

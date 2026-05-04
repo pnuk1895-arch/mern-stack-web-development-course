@@ -1,0 +1,56 @@
+<!-- what is classList -->
+<!--classList return the array that contain all class of an element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <style>
+       *{
+         margin: 0;
+         padding: 0;
+       }
+        .style1{
+          background-color: brown;
+          width: 200px;
+          height: 200px;
+          color: white;
+        }
+        .style2{
+          border: 5px solid black;
+          border-radius: 5px;
+        }
+  </style>
+  <title>class List</title>
+</head>
+<body>
+      <h1 class="style1">classList</h1>
+      <script>
+          let h1=document.querySelector("h1")
+          //printing all classess of the given element
+          console.log(h1.classList)
+          //printing the first class of the given element
+          console.log(h1.classList[0])
+          //printing the second class of the given element
+          console.log(h1.classList[1])
+          //printing the third class of the given element
+          console.log(h1.classList[2])
+          // printing the length of the classList
+          console.log(h1.classList.length)
+          //adding a new class to the given element
+          h1.classList.add("style2")
+          //removing a class from the given element
+          h1.classList.remove("style1")
+          //toggling a class of the given element
+          //toggle() — Add/remove automatically
+          // If the class exists → remove
+          // If not → add
+          h1.classList.toggle("style1")
+          //checking if the given element contains a class or not
+          console.log(h1.classList.contains("style1"))
+          //replacing a class with another class
+          h1.classList.replace("style1","style2")
+      </script>
+</body>
+</html>

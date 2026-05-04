@@ -22,16 +22,16 @@ function getHome(req,res)
 
 function booking(req,res){
 
-       const bookingDataPath=path.join(__dirname,"../database/bookingData.json")
+       // const bookingDataPath=path.join(__dirname,"../database/bookingData.json")
 
-       Home.fetchAll(bookingDataPath,(error,filedata)=>{
-              if(error){
-                     console.log("error while fetching a booking data:",error)
-              }
-              else{
+       // Home.fetchAll(bookingDataPath,(error,filedata)=>{
+       //        if(error){
+       //               console.log("error while fetching a booking data:",error)
+       //        }
+       //        else{
                      
-              }
-       })
+       //        }
+       // })
 }
 
 function storeFavourite(req, res) {
@@ -45,12 +45,11 @@ function storeFavourite(req, res) {
 
         if (error) {
             console.log(error);
-            return res.status(500).send("Something went wrong");
+            return res.status(500).json({"success":false,"message":message})
         }
 
         // ✅ message comes from model (duplicate OR success)
-        console.log(message);
-        return res.send(message);
+        return res.status(200).json({"success":true,"message":message});
     });
 }
 

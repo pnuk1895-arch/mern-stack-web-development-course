@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .heighlight{
+        background-color: blue;
+        color: white;
+      }
+      .bigfont{
+        font-size: 20px;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      .border{
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+
+    <p id="para" class="heighlight">This is a paragraph</p>
+    <button id="bigfont">big font</button>
+    <button id="bold">bold</button>
+    <button id="border">border</button>
+     <script>
+      //Getting the paragraph element
+        let para=document.querySelector("#para")
+        console.log(para)
+
+      //adding event listener(event handler) for click event on the "big font" button
+        let element=document.querySelector("#bigfont")
+        element.addEventListener("click", function() {
+            // para.className="bigfont"//this will overwrite the existing class with the new class
+            // console.log(para)
+            if(para.className=="heighlight"){
+                para.className="heighlight bigfont"
+                console.log(para)
+            }
+            else if(para.className=="heighlight bold"){
+                para.className="heighlight bold bigfont"
+                console.log(para)
+            }
+            else if(para.className=="heighlight border"){
+                para.className="heighlight border bigfont"
+                console.log(para)
+            }
+            else if(para.className=="heighlight bold border"){
+                para.className="heighlight bold border bigfont"
+                console.log(para)
+            }
+            else if(para.className=="heighlight bigfont"){
+                para.className="heighlight"
+                console.log(para)
+            }
+            else if(para.className=="heighlight bold bigfont"){
+                para.className="heighlight bold"
+                console.log(para)
+            }
+            else if(para.className=="heighlight border bigfont"){
+                para.className="heighlight border"
+                console.log(para)
+            }
+            else if(para.className=="heighlight bold border bigfont"){
+                para.className="heighlight bold border"
+                console.log(para)
+            }
+        })
+//adding event listener(event handler) for click event on the "bold" button
+         let boldButton=document.querySelector("#bold")
+          boldButton.addEventListener("click", function() {
+            if(para.className=="heighlight"){
+              para.className="heighlight bold"
+              console.log(para)
+            }else if(para.className=="heighlight bigfont"){
+              para.className="heighlight bigfont bold"
+              console.log(para)
+            }else if(para.className=="heighlight border"){
+              para.className="heighlight border bold"
+              console.log(para)
+            }
+            else if(para.className=="heighlight border bigfont"){
+              para.className="heighlight border bigfont bold"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bold"){
+              para.className="heighlight"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bigfont bold"){
+              para.className="heighlight bigfont"
+              console.log(para)
+            }
+            else if(para.className=="heighlight border bold"){
+              para.className="heighlight border"
+              console.log(para)
+            }
+            else if(para.className=="heighlight border bigfont bold"){
+              para.className="heighlight border bigfont"
+              console.log(para)
+            }
+        })
+//adding event listener(event handler) for click event on the "border" button
+        let borderButton=document.querySelector("#border")
+        borderButton.addEventListener("click", function() {
+            if(para.className=="heighlight"){
+              para.className="heighlight border"
+              console.log(para)
+            }else if(para.className=="heighlight bigfont"){
+              para.className="heighlight bigfont border"
+              console.log(para)
+            }else if(para.className=="heighlight bold"){
+              para.className="heighlight bold border"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bigfont bold"){
+              para.className="heighlight bigfont bold border"
+              console.log(para)
+            }
+            else if(para.className=="heighlight border"){
+              para.className="heighlight"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bigfont border"){
+              para.className="heighlight bigfont"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bold border"){
+              para.className="heighlight bold"
+              console.log(para)
+            }
+            else if(para.className=="heighlight bigfont bold border"){
+              para.className="heighlight bigfont bold"
+              console.log(para)
+            }
+        })
+</script>
+</body>
+</html>
