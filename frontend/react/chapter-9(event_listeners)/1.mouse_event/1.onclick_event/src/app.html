@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>click me</button>
+    </div>
+    <script>
+        let box=document.querySelector("div")
+        let button=document.querySelector("button")
+
+        button.addEventListener("click",()=>{
+            console.log("this is clicked")
+            let btn=document.createElement("button")
+            btn.innerText="click me"
+            btn.style.backgroundColor="blue"
+            box.append(btn)
+        })
+    </script>
+</body>
+</html>

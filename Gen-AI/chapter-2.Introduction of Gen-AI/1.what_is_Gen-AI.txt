@@ -1,0 +1,77 @@
+//chapter-01 foundation of genrative ai
+
+//what is gen ai
+
+//ans- gen ai is a branch of artificial intellgence that focuses on creating intelligent  models or sytem  or algorithm  that capable of understanding a human language and based on  understanding it  generate new content, such as text, images, videos, music,code and more.
+
+//gen ai models learn patterns and structures from large datasets and use that knowledge to produce optput.
+
+// model that we useses in gen ai to generate new content is called LLM(large language model) 
+
+
+
+                           //appliction of gen ai
+
+// LLM models ka use chatbots, virtual assistants, content generation, language translation, aur bahut sare applications me hota hai.
+
+
+//1)chatbots- LLM models ka use chatbots me hota hain, jise customer support, virtual assistants, aur conversational agents ke liye use kiya jata hai. ye chatbots user ke questions ka answer de sakte hain, information provide kar sakte hain, aur natural language me baat cheet kar sakte hain.
+
+//2)content generation- LLM models ka use content generation me hota hain, jise articles, blogs, social media posts, aur creative writing ke liye use kiya jata hai. ye models user ke prompts ke basis pe naya content generate kar sakte hain.
+
+example: ChatGPT, Bard, Gemini, Grok, Claude, Llama, etc
+
+
+// 1) company and their llm model and popular product
+
+1) OpenAI
+  LLM model- GPT series (GPT-3, GPT-4, GPT-5)
+  popular product- ChatGPT, DALL-E, JukeBox, Codex, etc
+
+  chatgpt:create new text and images based on user prompts
+  DALL-E: create new images and videos based on user prompts
+  JukeBox: create new music and voices based on user prompts
+  Codex: code generation based on user prompts, it can generate code in various programming languages based on natural language descriptions.
+
+
+2) Anthropic
+  LLM model- Claude
+  example- Claude 2, Claude Pro, etc
+  popular product- Claude, Claude Pro, etc
+
+3)meta
+  example- Llama 2, Llama 3, etc
+  popular product- Llama, Llama 2, Llama 3, etc
+
+4)google
+  llm model- Gemini
+  example- Gemini 1.5, Gemini 2, etc
+  popular product- Gemini, Gemini Pro, etc
+
+5)xAI
+  llm model- Grok
+  popular product- Grok, etc
+  
+
+
+// 3)language translation- LLM models ka use language translation me hota hain, jise ek language se dusri language me text translate karne ke liye use kiya jata hai. ye models user ke input text ko samajh kar uska accurate translation provide kar sakte hain.
+
+// example: google translate, deepl,etc
+
+// 4)virtual assistants- LLM models ka use virtual assistants me hota hain, jise siri, alexa, google assistant, etc. ye virtual assistants natural language processing ka use karke human language ko samajhte hain aur uske basis pe response de sakte hain. ye virtual assistants apne users ke questions ka answer de sakte hain, reminders set kar sakte hain, music play kar sakte hain, aur bahut kuch kar sakte hain.
+
+
+/
+
+// what is the diffreence b/w gpt ,chat gpt and open ai
+
+//GPT (Generative Pre-trained Transformer) ek type ka LLM hai jo text generate karne ke liye use hota hai. GPT-3 aur GPT-4 iske versions hain, jisme GPT-4 zyada advanced aur powerful hai.abhi latest verstion gpt-5 hai
+
+//ChatGPT ek specific application hai GPT model ka, jo conversational AI ke liye design kiya gaya hai. Iska main focus user ke questions ka jawab dena aur natural language me baat cheet karna hai. ChatGPT ko OpenAI ne develop kiya hai, aur ye GPT-3 ya GPT-4 par based ho sakta hai, depending on the version used.
+
+// OpenAI ek research organization hai jo artificial intelligence ke field me kaam karti hai. OpenAI ne GPT series ke models develop kiye hain, aur ChatGPT bhi unka ek product hai. OpenAI ka mission safe AI develop karna aur uske benefits ko sabke liye accessible banana hai.
+
+// question:list of ai company and their llm model and  therir popular product
+
+
+

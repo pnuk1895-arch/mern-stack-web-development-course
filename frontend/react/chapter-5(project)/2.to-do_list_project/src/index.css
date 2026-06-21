@@ -1,0 +1,138 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* BODY */
+body {
+  background: #f1f5f9;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* INPUT ROW */
+.input-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* INPUT */
+.task-input,
+.date-input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.task-input:focus,
+.date-input:focus {
+  border-color: #2563eb;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* TASK LIST */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TASK ROW */
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: 0.2s;
+}
+
+.task-row:hover {
+  background: #f8fafc;
+}
+
+/* TASK INFO */
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-text {
+  font-size: 15px;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.task-date {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.delete-btn i {
+  color: #ef4444;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+.delete-btn:hover i {
+  color: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,22 @@
+/* Now we'll add a scrollable area where messages from the user and AI will appear. */
+
+
+
+Hide the welcome screen temporarily
+
+Since we're displaying messages now, you can temporarily hide the welcome screen:
+
+.welcome-screen{
+    display:none;
+}
+
+Later, with JavaScript, we'll show the welcome screen only when there are no messages.
+
+
+
+outcome 
+
+
+User messages appear on the right.
+AI messages appear on the left.
+Messages stack vertically with spacing.

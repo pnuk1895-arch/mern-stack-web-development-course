@@ -1,0 +1,111 @@
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f5f9;
+}
+#root{
+   height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    
+}
+.taskBar{
+  height: 300px;
+  width: 650px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 18px -5px;
+}
+.bar1{
+  margin: 0px 27px;
+}
+
+.bar1 h2{
+  font-family:sans-serif ;
+  font-size: 25px;
+}
+.bar1 form{
+  display: flex;
+  gap: 10px;
+}
+
+.input1{
+    border: 1px solid #e2e8f0;
+    width: 309px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 0px 14px;
+}
+
+.input2{
+    border: 1px solid #e2e8f0;
+    width: 129px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 0px 14px;
+    font-family: sans-serif;
+}
+
+.button1{
+  width: 129px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+
+/* ///////bar2//////////////////// */
+.bar2{
+    margin: 23px 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#task1{
+    border: 1px solid #e2e8f0;
+    height: 60px;
+    width: 596px;
+    border-radius: 14px;
+}
+ #task1 h4{
+    margin: 13px 0px 0px 24px;
+     font-family: sans-serif;
+     font-weight: 100;
+     font-size: 15px;
+ }
+#task1 p{
+    margin: -1px 0px 0px 24px;
+    font-size: 15px;
+    opacity: 62%;
+
+}
+
+#task2{
+    border: 1px solid #e2e8f0;
+    height: 60px;
+    width: 596px;
+    border-radius: 14px;
+}
+#task2 h4{
+    margin: 13px 0px 0px 24px;
+     font-family: sans-serif;
+     font-weight: 100;
+     font-size: 15px;
+}
+#task2 p{
+    margin: -1px 0px 0px 24px;
+    font-size: 15px;
+    opacity: 62%;
+    
+}

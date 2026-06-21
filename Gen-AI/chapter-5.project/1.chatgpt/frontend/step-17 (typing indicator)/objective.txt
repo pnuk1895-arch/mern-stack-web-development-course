@@ -1,0 +1,16 @@
+Goal
+
+When user clicks New Chat:
+
+Chat 1
+
+Again:
+
+Chat 1
+Chat 2
+
+Again:
+
+Chat 1
+Chat 2
+Chat 3

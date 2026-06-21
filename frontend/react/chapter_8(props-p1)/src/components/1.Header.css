@@ -1,0 +1,27 @@
+/* Header */
+
+.header{
+  background-color: #111827;
+  color: white;
+  padding: 20px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 32px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover{
+  color: #60a5fa;
+}

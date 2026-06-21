@@ -1,0 +1,10 @@
+JavaScript Step 1: Send a Message Dynamically
+
+
+Goal
+
+When the user types a message and clicks the send button:
+
+The message should appear in the chat.
+The input field should become empty.
+The chat should not reload the page.

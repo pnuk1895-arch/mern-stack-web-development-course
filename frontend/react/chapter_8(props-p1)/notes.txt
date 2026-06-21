@@ -1,0 +1,22 @@
+Simple Definition
+
+Props are like function arguments for components.
+
+Example:
+
+function Welcome(props) {
+  return <h1>Hello {props.name}</h1>;
+}
+
+Usage:
+
+<Welcome name="Rahul" />
+
+Here:
+
+name="Rahul" → prop passed from parent
+props.name → received in child
+
+Output:
+
+Hello Rahul

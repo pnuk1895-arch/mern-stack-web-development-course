@@ -1,0 +1,16 @@
+{
+  "name": "1.invoke_llm_using-geminiai_sdk",
+  "version": "1.0.0",
+  "description": "this project for generating text through api call by llm model",
+  "license": "ISC",
+  "author": "priyanshu",
+  "type": "module",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0"
+  }
+}
