@@ -1,0 +1,9 @@
+JavaScript Step 6: Implement the "New Chat" Button
+
+Our goal:
+
+When the user clicks + New Chat:
+
+✅ All messages disappear
+✅ Welcome screen appears again
+✅ Input field gets focus

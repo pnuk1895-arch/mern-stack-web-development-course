@@ -1,0 +1,59 @@
+<!-- how to achive a multitasking(how to do multiple things simultaniusouly) in java script program -->
+
+
+<!-- as we know that java script is a single threded programming langauge so it can't do multi-tasking but in reality it able to do multitasking bcz of browser or node js -->
+
+<!--the browser (or Node.js) provides powerful background helpers — called Web APIs. -->
+
+<!--javaScript alone can’t do multiple things -->
+
+
+
+<!-- example: doing multitasking with the help of browser-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asynchronous Task Demo</title>
+</head>
+<body>
+  <h2>Software Tasks (Asynchronous)</h2>
+
+  <button onclick="heavyTask()">Calculate Sum (Heavy Task)</button>
+  <button onclick="searchInternet()">Search Internet</button>
+
+  <script>
+    // Task 1: Heavy sum calculation (Asynchronous using setTimeout)
+    function heavyTask() {
+      let n = prompt("Enter a number (like 500000000)");
+      let sum = 0;
+
+      console.log("Started heavy calculation...");
+
+      // We use setTimeout to move the heavy task to the browser's Web API
+      setTimeout(() => {
+        console.time("SumTime");
+        for (let i = 0; i <= n; i++) {
+          sum += i;
+        }
+        console.timeEnd("SumTime");
+        alert("Sum from 0 to " + n + " is: " + sum);
+      },10000);
+
+      console.log("You can still use the app while sum is calculating!");
+    }
+
+    // Task 2: Internet search simulation
+    function searchInternet() {
+      let query = prompt("Enter something to search");
+      alert(`Searching the internet for "${query}"...`);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

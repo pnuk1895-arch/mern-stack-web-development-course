@@ -1,0 +1,9 @@
+Step 8: Make the Layout Behave Like Real ChatGPT
+
+Right now, the input area and messages exist, but the layout isn't behaving exactly like ChatGPT.
+
+Our goal:
+
+Messages should scroll independently.
+Input box should stay at the bottom.
+Entire chat area should fill the screen properly.

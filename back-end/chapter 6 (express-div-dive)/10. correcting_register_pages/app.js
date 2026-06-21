@@ -15,12 +15,6 @@ app.use(express.urlencoded({extented : true})) //prasing request
 app.use(hostRoutes)
 app.use(userRoutes)
 
-
-
-
-
-
-
 const port=4001
 app.listen(port,()=>{
     console.log(`server is listen at ${port}`)

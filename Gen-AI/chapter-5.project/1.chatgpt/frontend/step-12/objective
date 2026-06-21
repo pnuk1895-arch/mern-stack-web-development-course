@@ -1,0 +1,8 @@
+JavaScript Step 5: Show/Hide Welcome Screen
+
+Right now, your welcome screen is always visible or manually hidden.
+
+Real ChatGPT behaves like this:
+
+When there are no messages → Show welcome screen.
+When the first message is sent → Hide welcome screen.

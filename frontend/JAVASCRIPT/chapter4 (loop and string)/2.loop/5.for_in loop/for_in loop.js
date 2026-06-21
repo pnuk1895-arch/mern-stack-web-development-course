@@ -8,15 +8,15 @@
 //     city:"delhi"
 // }
 
-// for(let key in object)
-// {
-//        console.log(key)
-// }
-
-const user = { name: "Alice", age: 25 };
-
-for (let key in user) {
-  if (Object.hasOwn(user, key)) {
-    console.log(`${key}: ${user[key]}`);
-  }
+for(let key in object)
+{
+   console.log(key)
 }
+
+// const user = { name: "Alice", age: 25 };
+
+// for (let key in user) {
+//   if (Object.hasOwn(user, key)) {
+//     console.log(`${key}: ${user[key]}`);
+//   }
+// }

@@ -1,0 +1,48 @@
+<!-- whais is single threaded -->
+
+<!-- single threaded means it has one path of execution that is one  call stack whenever a function is called, it is pushed onto the call stack.The function runs completely, then is popped off.Only then the next function can run. -->
+
+<!-- so basically in single threaded only one function can run at any moment while others wait this is called synchronous programming bcz  code runs sequentially.The next instruction cannot run until the current one finishes. -->
+
+<!-- The CPU executes instructions by using the address in the Program counter to fetch the next instruction from memory and then automatically incrementing the PC's value  -->
+
+
+
+ <!-- limitaion of single threaded programming language -->
+<!-- No  parallelism:that means if in our program we have multiple indendent task t1(doing heavy task) and task2(seraching on internet) or making an API request or updating the UI then T2 must wait for T1 to complete because both share the same single call stack.As a result, the application may freeze or become unresponsive. -->
+<!-- example -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Synchronous Task Demo</title>
+</head>
+<body>
+  <h2>Software Tasks</h2>
+
+  <button onclick="heavyTask()">Calculate Sum (Heavy Task)</button>
+  <button onclick="searchInternet()">Search Internet</button>
+
+  <script>
+    // Task 1: Heavy sum calculation (synchronous)
+    function heavyTask() {
+      let n = prompt("Enter a number (like 500000000)");
+      let sum = 0;
+      for (let i = 0; i <= n; i++) {
+        sum=sum+i;
+      }
+
+      alert("Sum from 0 to " + n + " is: " + sum);
+    }
+
+    // Task 2: Internet search simulation
+    function searchInternet() {
+      let query = prompt("Enter something to search");
+      alert(`Searching the internet for "${query}"...`);
+    }
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,7 @@
+JavaScript Step 3: Dynamic AI Responses
+
+Right now, the AI always replies:
+
+I received your message!
+
+In this step, we'll make the AI respond based on what the user typed.

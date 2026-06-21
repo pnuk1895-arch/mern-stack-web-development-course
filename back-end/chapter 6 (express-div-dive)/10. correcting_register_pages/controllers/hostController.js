@@ -11,12 +11,10 @@ function registerForm(req,res){
         res.send("oops, something went wrong.")
         console.log(`register:${error}`)
     }
-        
     else
     {
         console.log("register page landed successfully")
-    }
-}
+    }}
 
 )}
 

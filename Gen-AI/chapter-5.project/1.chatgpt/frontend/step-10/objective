@@ -1,0 +1,35 @@
+
+JavaScript Step 2: Enter Key + Auto Scroll + AI Reply
+Goal
+
+By the end of this step:
+
+✅ Pressing Enter sends the message
+✅ Chat automatically scrolls to the latest message
+✅ AI sends a dummy reply
+
+
+
+
+outcome 
+
+
+Final Flow
+User types message
+        ↓
+Press Enter / Click Send
+        ↓
+Message appears
+        ↓
+Input clears
+        ↓
+Chat scrolls down
+        ↓
+AI replies after 1 second
+
+
+
+Expected Output
+👤 Hello
+
+🤖 I received your message!

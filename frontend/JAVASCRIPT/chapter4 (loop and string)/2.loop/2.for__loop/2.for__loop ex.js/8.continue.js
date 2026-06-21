@@ -1,0 +1,1 @@
+//Write a program that runs a loop with the condition <= 20 and counts each iteration. If the iteration number becomes equal to 5,skip that iteration and proceed with the next iteration.

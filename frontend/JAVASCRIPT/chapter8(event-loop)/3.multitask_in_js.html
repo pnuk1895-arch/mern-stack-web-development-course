@@ -1,0 +1,30 @@
+<!-- The browser has implemented varius functionalities using multithreading. Each functionality (timers, network, rendering, storage, GPU, etc.) runs on its own thread so the browser can perform multitasking efficiently.
+
+for example:Running JavaScript,Handling user events,Rendering the UI,Playing audio/video,Managing timers,Making network calls,Doing background tasks -->
+
+
+<!-- these functinality implemented in a c++ program -->
+
+
+<!-- To run these functinality browser exposes varius api called web api -->
+
+<!-- example -->
+
+<!-- JS calls an async function -->
+
+setTimeout(() => {
+  console.log("done");
+}, 2000);
+
+ <!-- JS thread gives this request to the Timer thread of the browser -->
+
+<!-- JS says:Timer thread, please handle this.” -->
+
+<!-- Timer thread counts 2 seconds -->
+
+<!-- JS is free now. -->
+<!-- After 2 seconds, Timer thread sends callback to the Event Loop -->
+<!-- Event loop checks if the JS thread is empty. -->
+<!-- If JS thread is free, callback goes to the call stack and executes -->
+
+→ Prints: "done"

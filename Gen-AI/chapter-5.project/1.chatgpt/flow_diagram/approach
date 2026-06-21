@@ -1,0 +1,26 @@
+hase 1: Frontend UI
+
+✅ Sidebar
+✅ Chat messages
+✅ Input box
+✅ Responsive design
+
+Phase 2: Frontend JavaScript
+
+✅ Send messages
+✅ Display user and AI messages
+✅ Auto-scroll
+✅ Create new chats
+
+Phase 3: Backend (Express + MongoDB)
+
+✅ User registration/login
+✅ Save chat history in MongoDB
+✅ Fetch previous chats
+✅ Delete chats
+
+Phase 4: AI Integration
+
+✅ Send prompts to an LLM API
+✅ Receive AI responses
+✅ Stream responses (like ChatGPT typing)

@@ -1,0 +1,17 @@
+{
+  "name": "2.invoke_llm_using_geminiai_from_termianl",
+  "version": "1.0.0",
+  "description": "this is my terminal base llm project",
+  "license": "ISC",
+  "author": "priyanshu",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "dotenv": "^17.4.2"
+  }
+}

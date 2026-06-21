@@ -1,0 +1,28 @@
+Let's start JavaScript Step 7: Local Storage.
+
+Goal
+
+After this step:
+
+✅ Messages remain even after refreshing the page
+✅ Chats are automatically loaded on page reload
+✅ New Chat clears both UI and storage
+
+
+
+What is Local Storage?
+
+localStorage lets the browser store data permanently.
+
+Example:
+
+localStorage.setItem("name", "Shahid");
+
+Retrieve it:
+
+const name = localStorage.getItem("name");
+console.log(name); // Shahid
+
+Remove it:
+
+localStorage.removeItem("name");

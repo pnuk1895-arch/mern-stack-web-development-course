@@ -1,0 +1,318 @@
+You're asking about the **IndexedDB** example. Let's go through it step by step.
+
+### Full code
+
+```javascript
+const request = indexedDB.open('MyDB', 1);
+
+request.onupgradeneeded = (event) => {
+  const db = event.target.result;
+  db.createObjectStore('arrays');
+};
+
+request.onsuccess = (event) => {
+  const db = event.target.result;
+  const tx = db.transaction('arrays', 'readwrite');
+  tx.objectStore('arrays').put(arr, 'myArray');
+};
+```
+
+---
+
+
+..............................................................
+## Step 1: Open (or create) a database
+
+```javascript
+const request = indexedDB.open('MyDB', 1);
+```
+
+Think of IndexedDB like a mini database inside the browser.
+
+This line says:
+
+> "Open a database named `MyDB`. If it doesn't exist, create it."
+
+* `"MyDB"` = database name
+* `1` = database version
+
+After this line:
+
+```text
+Browser
+└── MyDB
+```
+
+The operation is asynchronous, so JavaScript doesn't wait for it to finish.
+
+Instead, it gives you a `request` object.
+
+```javascript
+const request = indexedDB.open('MyDB', 1);
+```
+
+---
+........................................................................................
+## Step 2: Database setup
+
+```javascript
+request.onupgradeneeded = (event) => {
+```
+
+This runs only when:
+
+* database is created for the first time
+* version changes (e.g. 1 → 2)
+
+Think:
+
+> "The database is being installed or upgraded."
+
+---
+
+### Get the database object
+
+```javascript
+const db = event.target.result;
+```
+
+`event.target.result` contains the database.
+
+```text
+db
+└── MyDB
+```
+
+---
+
+### Create a table
+
+```javascript
+db.createObjectStore('arrays');
+```
+
+An Object Store is similar to a SQL table.
+
+```text
+MyDB
+└── arrays
+```
+
+Now your database has a store called `"arrays"`.
+
+---
+.......................................................................................
+
+## Step 3: Database ready
+
+```javascript
+request.onsuccess = (event) => {
+```
+
+This runs after the database opens successfully.
+
+---
+
+### Get database reference
+
+```javascript
+const db = event.target.result;
+```
+
+Again, grab the database object.
+
+```text
+db
+└── MyDB
+```
+
+---
+................................................................................
+## Step 4: Start a transaction
+
+```javascript
+const tx = db.transaction('arrays', 'readwrite');
+```
+
+Before reading or writing, IndexedDB requires a transaction.
+
+Think:
+
+> "I'm about to make changes to the database."
+
+* `"arrays"` = which store to use
+* `"readwrite"` = permission to read and write
+
+```text
+Transaction
+└── arrays
+```
+
+---
+...........................................................................
+## Step 5: Access the store
+
+```javascript
+tx.objectStore('arrays')
+```
+
+Gets the store we created earlier.
+
+```text
+MyDB
+└── arrays
+```
+
+---
+
+.....................................................................
+## Step 6: Save data
+
+```javascript
+tx.objectStore('arrays').put(arr, 'myArray');
+```
+
+Suppose:
+
+```javascript
+const arr = [1, 2, 3, 4];
+```
+
+This stores:
+
+```text
+Store: arrays
+
+Key       Value
+--------------------
+myArray   [1,2,3,4]
+```
+
+Notice:
+
+```javascript
+.put(value, key)
+```
+
+So:
+
+```javascript
+.put(arr, 'myArray')
+```
+
+means:
+
+```javascript
+value = [1,2,3,4]
+key = "myArray"
+```
+
+---
+...............................................................
+## Visual flow
+
+```text
+1. Open database
+   indexedDB.open("MyDB", 1)
+
+2. Create store (first time only)
+   arrays
+
+3. Open success
+
+4. Create transaction
+   readwrite
+
+5. Access store
+   arrays
+
+6. Save data
+   key: myArray
+   value: [1,2,3,4]
+```
+
+---
+...........................................................................
+## Reading the array back
+
+To get it later:
+
+```javascript
+const request = indexedDB.open('MyDB', 1);
+
+request.onsuccess = (event) => {
+  const db = event.target.result;
+
+  const tx = db.transaction('arrays', 'readonly');
+
+  const getRequest =
+    tx.objectStore('arrays').get('myArray');
+
+  getRequest.onsuccess = () => {
+    console.log(getRequest.result);
+  };
+};
+```
+
+Output:
+
+```javascript
+[1, 2, 3, 4]
+```
+
+---
+
+## Why use IndexedDB instead of localStorage?
+
+### localStorage
+
+```javascript
+localStorage.setItem(
+  'myArray',
+  JSON.stringify(arr)
+);
+```
+
+* Easy to use
+* Only stores strings
+* Limited storage (~5–10 MB)
+
+---
+
+### IndexedDB
+
+```javascript
+objectStore.put(arr, 'myArray');
+```
+
+* Stores arrays directly
+* Stores objects directly
+* Can store much larger amounts of data
+* Better for apps with lots of data
+
+Example:
+
+```javascript
+[
+  { id: 1, name: "John" },
+  { id: 2, name: "Alice" }
+]
+```
+
+can be stored directly without `JSON.stringify()`.
+
+So IndexedDB is basically:
+
+```text
+Browser Database
+    ↓
+Database (MyDB)
+    ↓
+Object Store (arrays)
+    ↓
+Records
+    ↓
+Key → Value
+```
+
+Very similar to a tiny database like SQL, but built into the browser.

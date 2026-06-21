@@ -23,7 +23,7 @@ let server=http.createServer((req,res)=>{
                 </body>
                 </html>`)
 
- res.end()
+        res.end()
 })
 
 let port=3011
