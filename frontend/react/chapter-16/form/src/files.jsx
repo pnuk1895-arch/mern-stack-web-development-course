@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function App() {
+  function App() {
   const [formData, setFormData] = useState({});
-
+  
   function handleChange(e) {
     setFormData(prev => ({
       ...prev,
