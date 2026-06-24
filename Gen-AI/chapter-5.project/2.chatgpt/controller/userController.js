@@ -1,4 +1,7 @@
 const path=require("path")
+const dotenv=require("dotenv")
+
+dotenv.config()
 
 function homePage(req,res){
     const homePath=path.join(__dirname,"../public/index.html")
@@ -19,8 +22,8 @@ async function callToLLM(req,res)
 {
     const { prompt } = req.body
 
-    const model="gemini-2.5-flash-lite"
-    const Apikey="AQ.Ab8RN6JkIHlF_nxGuhPosZeTiGhdUYRqCeI8_H9kMxVt1VcDlA"
+    const model=process.env.MODEL
+    const Apikey=process.env.API_KEY
     const URL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${Apikey}`;
 
     try {
