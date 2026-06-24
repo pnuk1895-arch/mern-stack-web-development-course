@@ -36,8 +36,8 @@
 // let firstName="Priyanshu"
 // let sureName="Negi"
 // let fullName=firstName.concat(" ",sureName)
-
 // console.log(fullName)
+
 //////////////////////////////////////////////////////////////////////////////////
 
 //using charAt

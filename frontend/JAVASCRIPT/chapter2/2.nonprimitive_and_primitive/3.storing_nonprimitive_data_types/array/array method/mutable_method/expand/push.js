@@ -5,7 +5,7 @@ let arr=[2,1,3,4,5]
 // console.log(arr)
 
 // using push
-arr.push(2,9,8,6)
+arr.push()
 console.log(arr)
 
 
