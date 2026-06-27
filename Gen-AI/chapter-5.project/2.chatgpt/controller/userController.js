@@ -1,82 +1,122 @@
-const path=require("path")
-const dotenv=require("dotenv")
+const path = require("path")
+// const dotenv = require("dotenv")
+const conversationModel = require("../model/conversationModel")
 
-dotenv.config()
+// dotenv.config()
 
-function homePage(req,res){
-    const homePath=path.join(__dirname,"../public/index.html")
-    
-    res.sendFile(homePath,(error)=>{
-        if(error)
-        {
+function homePage(req, res) {
+
+    const homePath = path.join(__dirname, "../public/index.html")
+
+    res.sendFile(homePath, (error) => {
+
+        if (error) {
+        
             console.log("error while sending home page", error)
+        
         }
-        else
-        {
+        else {
+        
             console.log("home page has been send")
+        
         }
     })
 }
 
-async function callToLLM(req,res)
-{
-    const { prompt } = req.body
+async function callToLLM(req, res) {
+    
+    const { prompt, conversationId } = req.body
 
-    const model=process.env.MODEL
-    const Apikey=process.env.API_KEY
-    const URL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${Apikey}`;
+    let conversationObj ;
 
-    try {
-        const responseLLM= await fetch(URL,{
-        method:"POST",
-        headers: {
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-                contents:[{
-                    parts:[{
-                        text:prompt
+try {
+    if(!conversationId) {
+        conversationObj = new conversationModel(
+            {
+                title: prompt,
+                messages: [
+                    {
+                        role: "user",
+                        text: prompt
+                    }
+                ]
+            }
+        )
+        await conversationObj.save()
+        console.log("data save")
+    }
+    else{
+        conversationObj = await conversationModel.findById(conversationId)
+
+        if(!conversationObj)
+        {
+            return res.status(400).json({
+                success: false,
+                message: "Connection down.Try again"
+            })
+        }
+        
+        conversationObj.messages.push(
+            {
+                role:"user",
+                text:prompt
+            }
+        )
+    }
+
+
+    const model =process.env.API_KEY
+    const Apikey =process.env.API_KEY
+    const URL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${Apikey}`
+    console.log(Apikey, model)
+    
+        const responseLLM = await fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [{
+                        text: prompt
                     }]
                 }],
-                generationConfig:{
-                    maxOutputTokens: 40, // Strictly limits the output to ~60 tokens
+                generationConfig: {
+                    maxOutputTokens: 60, // Strictly limits the output to ~60 tokens
                     temperature: 0.7
                 }
             })
         })
+
+        const data = await responseLLM.json()
+
+        const result = data //|| "no response found" .candidates?.[0].content.parts?.[0].text
         
-    // const data= await responseLLM.json() 
-    // // console.log(data)
-        const reader = responseLLM.body.getReader();//getReader() stream ko read karne ke liye reader object deta hai.
-        const decoder = new TextDecoder()
-         while(true)
-        { 
-            const { done, value } = await reader.read();
-            const chunk = decoder.decode(value);
-            // console.log(done,`value ;${value}`)
-
-            // const result= chunk
-            console.log(chunk)
-            // res.json({
-            //     result:result
-            // })
-            
-
-            if(done===true)
-            break
-
-        }
-        // res.json({
-        //     result:result
+        console.log("result",result)
+        
+        // conversationObj.messages.push({
+        //     role:"Ai",
+        //     text:result
         // })
 
-    } catch (error) {
-        console.log(`error while fetching llm ${error}`)
-    }
+
+        // await conversationObj.save()
+        // console.log("ID",conversationObj._id)
+
+        // res.status(200).json(
+        //     {
+        //         success:true,
+        //         result:result,
+        //         conversationId:conversationObj._id
+        //     }
+        // )
     
+    } catch (error) {
+        console.log(`error while fetching llm ${error.stack}`)
+    }
 }
 
-module.exports={
+module.exports = {
     homePage,
     callToLLM
 }

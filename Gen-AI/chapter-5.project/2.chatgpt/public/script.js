@@ -1,229 +1,170 @@
 const input = document.getElementById("message-input");
 const sendBtn = document.getElementById("send-btn");
-const messages = document.getElementById("messages");
-const welcomeScreen = document.getElementById("welcome-screen");
-const newChatBtn = document.getElementById("new-chat-btn");
-const chatList = document.getElementById("chat-list");
-const inputArea = document.getElementsByClassName("input-area")
+const inputArea= document.querySelector(".input-area")
+const welcomeScreen = document.querySelector(".welcome-screen")
 
-
-// Load chats from localStorage
-let chats = JSON.parse(localStorage.getItem("chats")) || [];
-
-// Sidebar chat count
-let chatCount = Number(localStorage.getItem("chatCount")) || 0;
-
+let currentConversationId = null;
+//  console.log(currentConversationId)
+// =======================
 // Event Listeners
+// =======================
+
 sendBtn.addEventListener("click", sendMessage);
 
 input.addEventListener("keydown", (e) => {
 
-    if (e.key === "Enter") {
-        sendMessage();
-    }
+
+if (e.key === "Enter") {
+    sendMessage();
+}
+
 
 });
 
-newChatBtn.addEventListener("click", newChat);
-
-// Load data when page opens
-loadChats();
-loadSidebar();
+// =======================
+// Send Message
+// =======================
 
 async function sendMessage() {
 
-    inputArea[0].style.position ="static";
+inputArea.style.position="static"
 
-    const text = input.value.trim();
+welcomeScreen.style.display="none"
 
-    if (text === "") return;
+console.log(currentConversationId)
+// getting user input or prompt
+const text = input.value.trim();
 
-    addMessage(text, "user");
+if (text === "") return;
 
-    input.value = "";
+// show user prompt
+showMessage(text, "user");
 
-    input.focus();
+input.value = "";
+input.focus();
 
-    // Show typing indicator
-    showTypingIndicator();
+// show typing indicator
+showTypingIndicator();
 
+try {
 
-    
-    const response= await fetch("http://localhost:5000/chat",{
+    // make API call to backend
+    const response = await fetch("/chat", {
         method: "POST",
-        headers:{
-            "Content-Type":"application/JSON"
+
+        headers: {
+            "Content-Type": "application/json"
         },
-        body:JSON.stringify({
-            prompt: text
+
+        body: JSON.stringify({
+            prompt: text,
+            conversationId: currentConversationId
         })
-    })
-    
-    const data = await response.json()
-     console.log(data)
+    });
 
-    if(data)
-    {
-        removeTypingIndicator()
+    const data = await response.json();
 
-        addMessage(data.result,"Ai")
-    }
+    currentConversationId = data.conversationId;
 
-    
+
+    removeTypingIndicator();
+
+    // show AI response
+    showMessage(data.result, "AI");
+}
+catch (error) {
+
+    console.log(error);
+
+    removeTypingIndicator();
 
 }
 
-function addMessage(text, role, save = true) {
 
-    const message = document.createElement("div");
-
-    message.classList.add("message", role);
-
-    const avatar =
-        role === "user"
-            ? "👤"
-            : "🤖";
-
-    message.innerHTML = `
-        <div class="avatar">
-            ${avatar}
-        </div>
-
-        <div class="message-content">
-            ${text}
-        </div>
-    `;
-
-    // Hide welcome screen
-    welcomeScreen.style.display = "none";
-
-    inputArea[0].style.position="static"
-
-    // Add message
-    messages.appendChild(message);
-
-    // Auto scroll
-    messages.scrollTop = messages.scrollHeight;
-
-    // Save in localStorage
-    if (save) {
-
-        chats.push({
-            text,
-            role
-        });
-
-        localStorage.setItem(
-            "chats",
-            JSON.stringify(chats)
-        );
-
-    }
 }
- 
+
+// =======================
+// Add Message To UI
+// =======================
+
+function showMessage(text, role) {
+
+
+const message = document.createElement("div");
+
+message.classList.add(
+    "message",
+    role
+);
+
+const avatar =
+    role === "user"
+        ? "👤"
+        : "🤖";
+
+message.innerHTML = `
+    <div class="avatar">
+        ${avatar}
+    </div>
+
+    <div class="message-content">
+        ${text}
+    </div>
+`;
+
+messages.appendChild(message);
+
+messages.scrollTop =
+    messages.scrollHeight;
+
+
+}
+
+// =======================
+// Typing Indicator
+// =======================
+
 function showTypingIndicator() {
 
-    const typing = document.createElement("div");
+const typing =
+    document.createElement("div");
 
-    typing.classList.add("message", "ai");
+typing.classList.add(
+    "message",
+    "ai"
+);
 
-    typing.id = "typing-indicator";
+typing.id = "typing-indicator";
 
-    typing.innerHTML = `
-        <div class="avatar">
-            🤖
-        </div>
+typing.innerHTML = `
+    <div class="avatar">
+        🤖
+    </div>
 
-        <div class="message-content">
-            Typing...
-        </div>
-    `;
+    <div class="message-content">
+        Typing...
+    </div>
+`;
 
-    messages.appendChild(typing);
+messages.appendChild(typing);
 
-    messages.scrollTop = messages.scrollHeight;
+messages.scrollTop =
+    messages.scrollHeight;
+
+
 }
 
 function removeTypingIndicator() {
 
-    const typing = document.getElementById(
+
+const typing =
+    document.getElementById(
         "typing-indicator"
     );
 
-    if (typing) {
-        typing.remove();
-    }
-
+if (typing) {
+    typing.remove();
 }
 
-function loadChats() {
-
-    chats.forEach(chat => {
-
-        addMessage(
-            chat.text,
-            chat.role,
-            false
-        );
-
-    });
-
-}
-
-function createChatItem() {
-
-    chatCount++;
-
-    const div = document.createElement("div");
-
-    div.classList.add("chat-item");
-
-    div.textContent = `Chat ${chatCount}`;
-
-    chatList.appendChild(div);
-    
-    localStorage.setItem(
-        "chatCount",
-        chatCount
-    );
-}
-
-function loadSidebar() {
-
-    for (let i = 1; i <= chatCount; i++) {
-
-        const div = document.createElement("div");
-
-        div.classList.add("chat-item");
-
-        div.textContent = `Chat ${i}`;
-
-        chatList.appendChild(div);
-
-    }
-
-}
-
-function newChat() {
-
-    // Clear messages
-    messages.innerHTML = "";
-
-    // Reset chat array
-    chats = [];
-
-    // Remove localStorage chats
-    localStorage.removeItem("chats");
-
-    // Show welcome screen
-    welcomeScreen.style.display = "";
-
-    // Create sidebar item
-    createChatItem();
-
-    inputArea[0].style.position="absolute"
-
-    // Focus input
-    input.focus();
 
 }
